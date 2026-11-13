@@ -1,6 +1,6 @@
 {
- "generado": "2026-11-12T22:56:25Z",
- "total": 24,
+ "generado": "2026-11-13T10:45:41Z",
+ "total": 22,
  "eventos": [
   {
    "id": "fada-203",
@@ -33,34 +33,6 @@
    "urlInfo": "https://s3.chess-results.com/Tnr1493449.aspx?lan=2&SNode=S0",
    "fuente": "FADA",
    "fechaFin": "2026-11-29"
-  },
-  {
-   "id": "upo-162385",
-   "titulo": "V Ciclo de Conferencias Rosario Valpuesta: Investigaciones feministas desde la práctica reflexiva",
-   "fecha": "2026-11-12",
-   "hora": "12:00",
-   "lugar": "Biblioteca-CRAI, Avenida Rectora Rosario Valpuesta Fernández, Dos Hermanas",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "url": "https://eventos.upo.es/event_detail/162385",
-   "fuente": "Universidad Pablo de Olavide"
-  },
-  {
-   "id": "fisica-francis-halzen-premio-nobel-fisica-2026-neutrino-mensajero-universo",
-   "titulo": "Francis Halzen: Premio Nobel de Física 2026. NEUTRINO: El mensajero del Universo",
-   "fecha": "2026-11-12",
-   "hora": "12:00",
-   "lugar": "Aula Magna, Facultad de Física, Avda. Reina Mercedes s/n, Sevilla",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": "Francis Halzen (Nobel de Física 2026)",
-   "mencionaNobel": true,
-   "url": "https://fisica.us.es/noticias/francis-halzen-premio-nobel-fisica-2026-neutrino-mensajero-universo",
-   "fuente": "Facultad de Física (US)"
   },
   {
    "id": "divulgaus-representaciones-audiovisuales-en-la-espana-lgtbiq-de-los-pro-gay-la-bola-negra",
@@ -392,17 +364,17 @@
    "laureado": "Morten Meldal (Nobel de Química 2022)"
   },
   {
+   "titulo": "Morten Peter Meldal, Premio Nobel de Química 2022, ofrece una conferencia en la US",
+   "fuente": "Universidad de Sevilla",
+   "fecha": "2026-10-16",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcEZxN3NiaFNGVVg3UEFyaEZ1aWswRFF4ZzFDVG9RYy1UZlp2NzR3YVFheEc3NDE3RXEzRmFnc3RiN0hCRF9zUlExYW50T3lTeEVJcFBLTW56WjVwWXl1TnRib3haWlplcDBZLUd1SVdweGV2Q3VITmhIX0E5T09sZzEtZGE5UnlpOV9TRGpJRmZaTWZfUEpZbFJLWko2cUxmaXVmQm5YTFl5enBmQUs1aEZB?oc=5",
+   "laureado": "Morten Meldal (Nobel de Química 2022)"
+  },
+  {
    "titulo": "El cicCartuja acoge la visita de Morten P. Meldal, premio Nobel de Química 2022",
    "fuente": "Universidad de Sevilla",
    "fecha": "2026-10-16",
    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNMzJBY21jYVctdnpuU0dWTXhsdS1iZnlfYkt6blBsQm1Cc3RiV2pNR1p3V3ZaLXZSTTFxR3o4YmxDbWZEdVEwTUEzWXlCcFlXUnJlQ3NHM2ZOeHNqSEtkLS1tODdYbWU3MzEzbGM0VzVBdjlJNFktVTZJV0h4b3pScVl5LUxvWlI0VW9laUVqclVxWjVSTlQ3OGs4ZzluaGtHVnlDUlNIUDVZSUk1RElFUGhGUlFkdw?oc=5",
-   "laureado": "Morten Meldal (Nobel de Química 2022)"
-  },
-  {
-   "titulo": "Morten Peter Meldal, Premio Nobel de Química 2022, ofrece una conferencia en la US",
-   "fuente": "Universidad de Sevilla",
-   "fecha": "2026-09-30",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcEZxN3NiaFNGVVg3UEFyaEZ1aWswRFF4ZzFDVG9RYy1UZlp2NzR3YVFheEc3NDE3RXEzRmFnc3RiN0hCRF9zUlExYW50T3lTeEVJcFBLTW56WjVwWXl1TnRib3haWlplcDBZLUd1SVdweGV2Q3VITmhIX0E5T09sZzEtZGE5UnlpOV9TRGpJRmZaTWZfUEpZbFJLWko2cUxmaXVmQm5YTFl5enBmQUs1aEZB?oc=5",
    "laureado": "Morten Meldal (Nobel de Química 2022)"
   }
  ]
