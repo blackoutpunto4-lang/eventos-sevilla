@@ -1,0 +1,1547 @@
+{
+ "actualizado": "2026-11-12T22:55:29Z",
+ "laureados": [
+  {
+   "nombre": "Adam Riess",
+   "premio": "Nobel de Física 2011",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Alain Aspect",
+   "premio": "Nobel de Física 2022",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Albert Fert",
+   "premio": "Nobel de Física 2007",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Andre Geim",
+   "premio": "Nobel de Física 2010",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Andrea Ghez",
+   "premio": "Nobel de Física 2020",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Anne L’Huillier",
+   "premio": "Nobel de Física 2023",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Anton Zeilinger",
+   "premio": "Nobel de Física 2022",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Arthur McDonald",
+   "premio": "Nobel de Física 2015",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Barry Barish",
+   "premio": "Nobel de Física 2017",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Brian Josephson",
+   "premio": "Nobel de Física 1973",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Brian Schmidt",
+   "premio": "Nobel de Física 2011",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Carl Wieman",
+   "premio": "Nobel de Física 2001",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Carlo Rubbia",
+   "premio": "Nobel de Física 1984",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Claude Cohen-Tannoudji",
+   "premio": "Nobel de Física 1997",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Daniel Tsui",
+   "premio": "Nobel de Física 1998",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "David Gross",
+   "premio": "Nobel de Física 2004",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "David Wineland",
+   "premio": "Nobel de Física 2012",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "David Lee",
+   "premio": "Nobel de Física 1996",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "Didier Queloz",
+   "premio": "Nobel de Física 2019",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Donna Strickland",
+   "premio": "Nobel de Física 2018",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Douglas Osheroff",
+   "premio": "Nobel de Física 1996",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Eric Cornell",
+   "premio": "Nobel de Física 2001",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Duncan Haldane",
+   "premio": "Nobel de Física 2016",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Ferenc Krausz",
+   "premio": "Nobel de Física 2023",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Francis Halzen",
+   "premio": "Nobel de Física 2026",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Frank Wilczek",
+   "premio": "Nobel de Física 2004",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Geoffrey Hinton",
+   "premio": "Nobel de Física 2024",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Gérard Mourou",
+   "premio": "Nobel de Física 2018",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Gerardus 't Hooft",
+   "premio": "Nobel de Física 1999",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Gerd Binnig",
+   "premio": "Nobel de Física 1986",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Giorgio Parisi",
+   "premio": "Nobel de Física 2021",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "David Politzer",
+   "premio": "Nobel de Física 2004",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Hiroshi Amano",
+   "premio": "Nobel de Física 2014",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Horst Störmer",
+   "premio": "Nobel de Física 1998",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Georg Bednorz",
+   "premio": "Nobel de Física 1987",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Michael Kosterlitz",
+   "premio": "Nobel de Física 2016",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "James Peebles",
+   "premio": "Nobel de Física 2019",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Jerome Friedman",
+   "premio": "Nobel de Física 1990",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "John Mather",
+   "premio": "Nobel de Física 2006",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "John Clarke",
+   "premio": "Nobel de Física 2025",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "John Clauser",
+   "premio": "Nobel de Física 2022",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "John Hopfield",
+   "premio": "Nobel de Física 2024",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "John Hall",
+   "premio": "Nobel de Física 2005",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "John Martinis",
+   "premio": "Nobel de Física 2025",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Joseph Taylor Jr.",
+   "premio": "Nobel de Física 1993",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Kip Thorne",
+   "premio": "Nobel de Física 2017",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Klaus Hasselmann",
+   "premio": "Nobel de Física 2021",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Klaus von Klitzing",
+   "premio": "Nobel de Física 1985",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Konstantin Novoselov",
+   "premio": "Nobel de Física 2010",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Leo Esaki",
+   "premio": "Nobel de Física 1973",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Makoto Kobayashi",
+   "premio": "Nobel de Física 2008",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Michel Devoret",
+   "premio": "Nobel de Física 2025",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Michel Mayor",
+   "premio": "Nobel de Física 2019",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Pierre Agostini",
+   "premio": "Nobel de Física 2023",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Reinhard Genzel",
+   "premio": "Nobel de Física 2020",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Robert Laughlin",
+   "premio": "Nobel de Física 1998",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Robert Woodrow Wilson",
+   "premio": "Nobel de Física 1978",
+   "ambiguo": false,
+   "alias": [
+    "Robert Wilson"
+   ]
+  },
+  {
+   "nombre": "Roger Penrose",
+   "premio": "Nobel de Física 2020",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Russell Hulse",
+   "premio": "Nobel de Física 1993",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Samuel C.C. Ting",
+   "premio": "Nobel de Física 1976",
+   "ambiguo": false,
+   "alias": [
+    "Samuel Ting"
+   ]
+  },
+  {
+   "nombre": "Saul Perlmutter",
+   "premio": "Nobel de Física 2011",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Serge Haroche",
+   "premio": "Nobel de Física 2012",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Sheldon Glashow",
+   "premio": "Nobel de Física 1979",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Shuji Nakamura",
+   "premio": "Nobel de Física 2014",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Steven Chu",
+   "premio": "Nobel de Física 1997",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Syukuro Manabe",
+   "premio": "Nobel de Física 2021",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Takaaki Kajita",
+   "premio": "Nobel de Física 2015",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Theodor Hänsch",
+   "premio": "Nobel de Física 2005",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "William Phillips",
+   "premio": "Nobel de Física 1997",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "Wolfgang Ketterle",
+   "premio": "Nobel de Física 2001",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Aaron Ciechanover",
+   "premio": "Nobel de Química 2004",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Akira Suzuki",
+   "premio": "Nobel de Química 2010",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Akira Yoshino",
+   "premio": "Nobel de Química 2019",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Alan Heeger",
+   "premio": "Nobel de Química 2000",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Aleksey Yekimov",
+   "premio": "Nobel de Química 2023",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Arieh Warshel",
+   "premio": "Nobel de Química 2013",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Avram Hershko",
+   "premio": "Nobel de Química 2004",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Aziz Sancar",
+   "premio": "Nobel de Química 2015",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Benjamin List",
+   "premio": "Nobel de Química 2021",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Bernard Feringa",
+   "premio": "Nobel de Química 2016",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Brian Kobilka",
+   "premio": "Nobel de Química 2012",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Carolyn Bertozzi",
+   "premio": "Nobel de Química 2022",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Dan Shechtman",
+   "premio": "Nobel de Química 2011",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "David Baker",
+   "premio": "Nobel de Química 2024",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "David W.C. MacMillan",
+   "premio": "Nobel de Química 2021",
+   "ambiguo": false,
+   "alias": [
+    "David MacMillan"
+   ]
+  },
+  {
+   "nombre": "Demis Hassabis",
+   "premio": "Nobel de Química 2024",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Dudley Herschbach",
+   "premio": "Nobel de Química 1986",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Elias James Corey",
+   "premio": "Nobel de Química 1990",
+   "ambiguo": false,
+   "alias": [
+    "Elias Corey"
+   ]
+  },
+  {
+   "nombre": "Emmanuelle Charpentier",
+   "premio": "Nobel de Química 2020",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Eric Betzig",
+   "premio": "Nobel de Química 2014",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Frances Arnold",
+   "premio": "Nobel de Química 2018",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "George Smith",
+   "premio": "Nobel de Química 2018",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "Gerhard Ertl",
+   "premio": "Nobel de Química 2007",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Hartmut Michel",
+   "premio": "Nobel de Química 1988",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Henri Kagan",
+   "premio": "Nobel de Química 2026",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Jacques Dubochet",
+   "premio": "Nobel de Química 2017",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Jean-Marie Lehn",
+   "premio": "Nobel de Química 1987",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Jean-Pierre Sauvage",
+   "premio": "Nobel de Química 2016",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Jennifer Doudna",
+   "premio": "Nobel de Química 2020",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Joachim Frank",
+   "premio": "Nobel de Química 2017",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Johann Deisenhofer",
+   "premio": "Nobel de Química 1988",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "John Polanyi",
+   "premio": "Nobel de Química 1986",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "John Walker",
+   "premio": "Nobel de Química 1997",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "John Jumper",
+   "premio": "Nobel de Química 2024",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Barry Sharpless",
+   "premio": "Nobel de Química 2022",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Kenso Soai",
+   "premio": "Nobel de Química 2026",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Koichi Tanaka",
+   "premio": "Nobel de Química 2002",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Kurt Wüthrich",
+   "premio": "Nobel de Química 2002",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Stanley Whittingham",
+   "premio": "Nobel de Química 2019",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Martin Chalfie",
+   "premio": "Nobel de Química 2008",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Michael Levitt",
+   "premio": "Nobel de Química 2013",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Morten Meldal",
+   "premio": "Nobel de Química 2022",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Moungi Bawendi",
+   "premio": "Nobel de Química 2023",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Omar Yaghi",
+   "premio": "Nobel de Química 2025",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Paul Modrich",
+   "premio": "Nobel de Química 2015",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Peter Agre",
+   "premio": "Nobel de Química 2003",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Richard Henderson",
+   "premio": "Nobel de Química 2017",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "Richard Schrock",
+   "premio": "Nobel de Química 2005",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Richard Robson",
+   "premio": "Nobel de Química 2025",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Roald Hoffmann",
+   "premio": "Nobel de Química 1981",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Robert Huber",
+   "premio": "Nobel de Química 1988",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Robert Lefkowitz",
+   "premio": "Nobel de Química 2012",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Roderick MacKinnon",
+   "premio": "Nobel de Química 2003",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Roger Kornberg",
+   "premio": "Nobel de Química 2006",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Ryoji Noyori",
+   "premio": "Nobel de Química 2001",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Sir Gregory Winter",
+   "premio": "Nobel de Química 2018",
+   "ambiguo": false,
+   "alias": [
+    "Sir Winter"
+   ]
+  },
+  {
+   "nombre": "Stefan Hell",
+   "premio": "Nobel de Química 2014",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Susumu Kitagawa",
+   "premio": "Nobel de Química 2025",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Thomas Cech",
+   "premio": "Nobel de Química 1989",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Tomas Lindahl",
+   "premio": "Nobel de Química 2015",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Venkatraman Ramakrishnan",
+   "premio": "Nobel de Química 2009",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Walter Gilbert",
+   "premio": "Nobel de Química 1980",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "William Moerner",
+   "premio": "Nobel de Química 2014",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Yuan Lee",
+   "premio": "Nobel de Química 1986",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Andrew Fire",
+   "premio": "Nobel de Medicina 2006",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Ardem Patapoutian",
+   "premio": "Nobel de Medicina 2021",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Barry Marshall",
+   "premio": "Nobel de Medicina 2005",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Bert Sakmann",
+   "premio": "Nobel de Medicina 1991",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Bruce Beutler",
+   "premio": "Nobel de Medicina 2011",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Carol Greider",
+   "premio": "Nobel de Medicina 2009",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Charles Rice",
+   "premio": "Nobel de Medicina 2020",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Christiane Nüsslein-Volhard",
+   "premio": "Nobel de Medicina 1995",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Craig Mello",
+   "premio": "Nobel de Medicina 2006",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "David Julius",
+   "premio": "Nobel de Medicina 2021",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Drew Weissman",
+   "premio": "Nobel de Medicina 2023",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Edvard Moser",
+   "premio": "Nobel de Medicina 2014",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Elizabeth Blackburn",
+   "premio": "Nobel de Medicina 2009",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Eric Wieschaus",
+   "premio": "Nobel de Medicina 1995",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Eric Kandel",
+   "premio": "Nobel de Medicina 2000",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Erwin Neher",
+   "premio": "Nobel de Medicina 1991",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Françoise Barré-Sinoussi",
+   "premio": "Nobel de Medicina 2008",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Fred Ramsdell",
+   "premio": "Nobel de Medicina 2025",
+   "ambiguo": false,
+   "alias": [
+    "Frederick Ramsdell"
+   ]
+  },
+  {
+   "nombre": "Gary Ruvkun",
+   "premio": "Nobel de Medicina 2024",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Georg Nagel",
+   "premio": "Nobel de Medicina 2026",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Gregg Semenza",
+   "premio": "Nobel de Medicina 2019",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Robert Horvitz",
+   "premio": "Nobel de Medicina 2002",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Harold Varmus",
+   "premio": "Nobel de Medicina 1989",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Harvey Alter",
+   "premio": "Nobel de Medicina 2020",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Jack Szostak",
+   "premio": "Nobel de Medicina 2009",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "James Rothman",
+   "premio": "Nobel de Medicina 2013",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "James Allison",
+   "premio": "Nobel de Medicina 2018",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Jeffrey Hall",
+   "premio": "Nobel de Medicina 2017",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "John O'Keefe",
+   "premio": "Nobel de Medicina 2014",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Joseph Goldstein",
+   "premio": "Nobel de Medicina 1985",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Jules Hoffmann",
+   "premio": "Nobel de Medicina 2011",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Karl Deisseroth",
+   "premio": "Nobel de Medicina 2026",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Katalin Karikó",
+   "premio": "Nobel de Medicina 2023",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Leland Hartwell",
+   "premio": "Nobel de Medicina 2001",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Linda Buck",
+   "premio": "Nobel de Medicina 2004",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Louis Ignarro",
+   "premio": "Nobel de Medicina 1998",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Mario Capecchi",
+   "premio": "Nobel de Medicina 2007",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Mary Brunkow",
+   "premio": "Nobel de Medicina 2025",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "May-Britt Moser",
+   "premio": "Nobel de Medicina 2014",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Michael Houghton",
+   "premio": "Nobel de Medicina 2020",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Michael Rosbash",
+   "premio": "Nobel de Medicina 2017",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Michael Brown",
+   "premio": "Nobel de Medicina 1985",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "Michael Young",
+   "premio": "Nobel de Medicina 2017",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "Peter Doherty",
+   "premio": "Nobel de Medicina 1996",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Peter Hegemann",
+   "premio": "Nobel de Medicina 2026",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Phillip Sharp",
+   "premio": "Nobel de Medicina 1993",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Randy Schekman",
+   "premio": "Nobel de Medicina 2013",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Richard Axel",
+   "premio": "Nobel de Medicina 2004",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Richard Roberts",
+   "premio": "Nobel de Medicina 1993",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "Rolf Zinkernagel",
+   "premio": "Nobel de Medicina 1996",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Satoshi Ōmura",
+   "premio": "Nobel de Medicina 2015",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Shimon Sakaguchi",
+   "premio": "Nobel de Medicina 2025",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Shinya Yamanaka",
+   "premio": "Nobel de Medicina 2012",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Sir Martin Evans",
+   "premio": "Nobel de Medicina 2007",
+   "ambiguo": false,
+   "alias": [
+    "Sir Evans"
+   ]
+  },
+  {
+   "nombre": "Sir Paul Nurse",
+   "premio": "Nobel de Medicina 2001",
+   "ambiguo": false,
+   "alias": [
+    "Sir Nurse"
+   ]
+  },
+  {
+   "nombre": "Sir Peter Ratcliffe",
+   "premio": "Nobel de Medicina 2019",
+   "ambiguo": false,
+   "alias": [
+    "Peter Ratcliffe"
+   ]
+  },
+  {
+   "nombre": "Stanley Prusiner",
+   "premio": "Nobel de Medicina 1997",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Svante Pääbo",
+   "premio": "Nobel de Medicina 2022",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Tasuku Honjo",
+   "premio": "Nobel de Medicina 2018",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Thomas Südhof",
+   "premio": "Nobel de Medicina 2013",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Tim Hunt",
+   "premio": "Nobel de Medicina 2001",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Torsten Wiesel",
+   "premio": "Nobel de Medicina 1981",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Tu Youyou",
+   "premio": "Nobel de Medicina 2015",
+   "ambiguo": false,
+   "alias": [
+    "Youyou Tu"
+   ]
+  },
+  {
+   "nombre": "Victor Ambros",
+   "premio": "Nobel de Medicina 2024",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Werner Arber",
+   "premio": "Nobel de Medicina 1978",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "William Campbell",
+   "premio": "Nobel de Medicina 2015",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "William Kaelin Jr",
+   "premio": "Nobel de Medicina 2019",
+   "ambiguo": false,
+   "alias": [
+    "William Kaelin"
+   ]
+  },
+  {
+   "nombre": "Yoshinori Ohsumi",
+   "premio": "Nobel de Medicina 2016",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Michael Spence",
+   "premio": "Nobel de Economía 2001",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Abhijit Banerjee",
+   "premio": "Nobel de Economía 2019",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Alvin Roth",
+   "premio": "Nobel de Economía 2012",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Amartya Sen",
+   "premio": "Nobel de Economía 1998",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Angus Deaton",
+   "premio": "Nobel de Economía 2015",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Ben Bernanke",
+   "premio": "Nobel de Economía 2022",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Bengt Holmström",
+   "premio": "Nobel de Economía 2016",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Christopher Pissarides",
+   "premio": "Nobel de Economía 2010",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Claudia Goldin",
+   "premio": "Nobel de Economía 2023",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Daniel McFadden",
+   "premio": "Nobel de Economía 2000",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Daron Acemoglu",
+   "premio": "Nobel de Economía 2024",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "David Card",
+   "premio": "Nobel de Economía 2021",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Douglas Diamond",
+   "premio": "Nobel de Economía 2022",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Eric Maskin",
+   "premio": "Nobel de Economía 2007",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Esther Duflo",
+   "premio": "Nobel de Economía 2019",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Eugene Fama",
+   "premio": "Nobel de Economía 2013",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Finn Kydland",
+   "premio": "Nobel de Economía 2004",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "George Akerlof",
+   "premio": "Nobel de Economía 2001",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Guido Imbens",
+   "premio": "Nobel de Economía 2021",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "James Robinson",
+   "premio": "Nobel de Economía 2024",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "James Heckman",
+   "premio": "Nobel de Economía 2000",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Jean Tirole",
+   "premio": "Nobel de Economía 2014",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Joel Mokyr",
+   "premio": "Nobel de Economía 2025",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Joseph Stiglitz",
+   "premio": "Nobel de Economía 2001",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Joshua Angrist",
+   "premio": "Nobel de Economía 2021",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Lars Peter Hansen",
+   "premio": "Nobel de Economía 2013",
+   "ambiguo": false,
+   "alias": [
+    "Lars Hansen"
+   ]
+  },
+  {
+   "nombre": "Michael Kremer",
+   "premio": "Nobel de Economía 2019",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Michael Woodford",
+   "premio": "Nobel de Economía 2026",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Myron Scholes",
+   "premio": "Nobel de Economía 1997",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Oliver Williamson",
+   "premio": "Nobel de Economía 2009",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Oliver Hart",
+   "premio": "Nobel de Economía 2016",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Paul Krugman",
+   "premio": "Nobel de Economía 2008",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Paul Romer",
+   "premio": "Nobel de Economía 2018",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Paul Milgrom",
+   "premio": "Nobel de Economía 2020",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Peter Diamond",
+   "premio": "Nobel de Economía 2010",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Peter Howitt",
+   "premio": "Nobel de Economía 2025",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Philip Dybvig",
+   "premio": "Nobel de Economía 2022",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Philippe Aghion",
+   "premio": "Nobel de Economía 2025",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Richard Thaler",
+   "premio": "Nobel de Economía 2017",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Robert Wilson",
+   "premio": "Nobel de Economía 2020",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "Robert Merton",
+   "premio": "Nobel de Economía 1997",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Robert Hall",
+   "premio": "Nobel de Economía 2026",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "Robert Engle III",
+   "premio": "Nobel de Economía 2003",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Robert Aumann",
+   "premio": "Nobel de Economía 2005",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Robert Shiller",
+   "premio": "Nobel de Economía 2013",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Roger Myerson",
+   "premio": "Nobel de Economía 2007",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Simon Johnson",
+   "premio": "Nobel de Economía 2024",
+   "ambiguo": true,
+   "alias": []
+  },
+  {
+   "nombre": "Thomas Sargent",
+   "premio": "Nobel de Economía 2011",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "Vernon Smith",
+   "premio": "Nobel de Economía 2002",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "William Nordhaus",
+   "premio": "Nobel de Economía 2018",
+   "ambiguo": false,
+   "alias": []
+  },
+  {
+   "nombre": "William Sharpe",
+   "premio": "Nobel de Economía 1990",
+   "ambiguo": false,
+   "alias": []
+  }
+ ]
+}
