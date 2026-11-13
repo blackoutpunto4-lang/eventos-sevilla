@@ -1,0 +1,2140 @@
+{
+ "actualizado": "2026-11-13T11:49:03Z",
+ "laureados": [
+  {
+   "nombre": "Aaron Naber",
+   "premio": "Breakthrough Prize en Matemáticas",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Aarón Ciechanover",
+   "premio": "Premio Lasker (investigación básica) 2000",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Achille Mbembe",
+   "premio": "Premio Holberg 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Adam Riess",
+   "premio": "Breakthrough Prize en Física Fundamental 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Adi Shamir",
+   "premio": "Premio Wolf de Matemáticas 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Adrian Krainer",
+   "premio": "Premio Wolf de Medicina 2021",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Adrian Peter Bird",
+   "premio": "Premio Shaw de Ciencias de la Vida 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Alain Aspect",
+   "premio": "Premio Wolf de Física 2010",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Alain Carpentier",
+   "premio": "Premio Lasker (investigación clínica) 2007",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Alan Guth",
+   "premio": "Premio Kavli de Astrofísica 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Albert Fert",
+   "premio": "Premio Wolf de Física 2006",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Albert Joseph Libchaber",
+   "premio": "Premio Wolf de Física 1986",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Alberto Ascherio",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Alec Jefreys",
+   "premio": "Premio Lasker (investigación clínica) 2005",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Aleksandr Zamolódchikov",
+   "premio": "Breakthrough Prize en Física Fundamental 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Alekséi Kitaev",
+   "premio": "Breakthrough Prize en Física Fundamental 2012",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Alex Eskin",
+   "premio": "Breakthrough Prize en Matemáticas 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Alexander Beilinson",
+   "premio": "Premio Wolf de Matemáticas 2018",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Alexander Levitzki",
+   "premio": "Premio Wolf de Medicina 2005",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Alexander Rudensky",
+   "premio": "Premio Crafoord 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Alexander Varshavsky",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Alfred Sommer",
+   "premio": "Premio Lasker (investigación clínica) 1997",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Alim-Louis Benabid",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Allan MacDonald",
+   "premio": "Premio Kavli de Nanociencia 2026",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Amina Helmi",
+   "premio": "Premio Kavli de Astrofísica 2026",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Andrei Linde",
+   "premio": "Premio Kavli de Astrofísica 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Andrew Fabian",
+   "premio": "Premio Kavli de Astrofísica 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Andrew Singleton",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Andrew Strominger",
+   "premio": "Breakthrough Prize en Física Fundamental 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Andrew Wiles",
+   "premio": "Premio Wolf de Matemáticas",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ann Graybiel",
+   "premio": "Premio Kavli de Neurociencia 2012",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Anne Dejean-Assémat",
+   "premio": "Premio Shaw de Ciencias de la Vida 2026",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Anne L'Huillier",
+   "premio": "Premio Wolf de Física 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Anthony Hyman",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Anton Zeilinger",
+   "premio": "Premio Wolf de Física 2010",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ardem Patapoutian",
+   "premio": "Premio Kavli de Neurociencia 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Arthur Horwich",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Arthur McDonald",
+   "premio": "Breakthrough Prize en Física Fundamental 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ashoke Sen",
+   "premio": "Breakthrough Prize en Física Fundamental 2012",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Atsuto Suzuki",
+   "premio": "Breakthrough Prize en Física Fundamental 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Avram Hershko",
+   "premio": "Premio Wolf de Medicina 2001",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Axel Ullrich",
+   "premio": "Premio Lasker (investigación clínica) 2019",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Barry Marshall",
+   "premio": "Premio Lasker (investigación clínica) 1995",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Bert Vogelstein",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Bertil Hille",
+   "premio": "Premio Lasker (investigación básica) 1999",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Bertrand Halperin",
+   "premio": "Premio Wolf de Física 2002",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Blake Wilson",
+   "premio": "Premio Lasker (investigación clínica) 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Blayne Heckel",
+   "premio": "Breakthrough Prize en Física Fundamental 2021",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Bonnie Bassler",
+   "premio": "Premio Wolf de Química 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Botond Roska",
+   "premio": "Premio Wolf de Medicina 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Brenda Milner",
+   "premio": "Premio Kavli de Neurociencia 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Brian Druker",
+   "premio": "Premio Lasker (investigación clínica) 2009",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Brian Schmidt",
+   "premio": "Breakthrough Prize en Física Fundamental 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Bruce Beutler",
+   "premio": "Premio Shaw de Ciencias de la Vida 2011",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Bryan Traynor",
+   "premio": "Breakthrough Prize en Ciencias de la Vida",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Carl June",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Carla Shatz",
+   "premio": "Premio Kavli de Neurociencia 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Carlos José Belmonte López",
+   "premio": "Premio Wolf de Medicina 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Carol Greider",
+   "premio": "Premio Lasker (investigación básica) 2006",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Carolyn Ruth Bertozzi",
+   "premio": "Premio Wolf de Química 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Cass Sunstein",
+   "premio": "Premio Holberg 2018",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Catherine Dulac",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2021",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Chad Mirkin",
+   "premio": "Premio Kavli de Nanociencia 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Charles Bennett",
+   "premio": "Premio Wolf de Física 2018",
+   "ambiguo": true
+  },
+  {
+   "nombre": "Charles Dinarello",
+   "premio": "Premio Crafoord 2009",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Charles Fefferman",
+   "premio": "Premio Wolf de Matemáticas 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Charles Lieber",
+   "premio": "Premio Wolf de Química 2012",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Charles Rice",
+   "premio": "Premio Lasker (investigación clínica) 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Charles Sawyers",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Chi-Huey Wong",
+   "premio": "Premio Wolf de Química 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ching Tang",
+   "premio": "Premio Wolf de Química 2011",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Christiane Nüsslein-Volhard",
+   "premio": "Premio Lasker (investigación básica) 1991",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Christine Holt",
+   "premio": "Premio Kavli de Neurociencia 2026",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Christine Petit",
+   "premio": "Premio Kavli de Neurociencia 2018",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Christoph Gerber",
+   "premio": "Premio Kavli de Nanociencia 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Christopher Hacon",
+   "premio": "Breakthrough Prize en Matemáticas 2018",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Christopher Walsh",
+   "premio": "Premio Kavli de Neurociencia 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Chuan He",
+   "premio": "Premio Wolf de Química 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Clay Armstrong",
+   "premio": "Premio Lasker (investigación básica) 1999",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Clifford Brangwynne",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Conny Aerts",
+   "premio": "Premio Kavli de Astrofísica 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Cornelia Bargmann",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Craig Hogan",
+   "premio": "Breakthrough Prize en Física Fundamental",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Dan Shechtman",
+   "premio": "Premio Wolf de Física 1999",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Daniel Drucker",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "David Allara",
+   "premio": "Premio Kavli de Nanociencia 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "David Baker",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2021",
+   "ambiguo": true
+  },
+  {
+   "nombre": "David Baulcombe",
+   "premio": "Premio Lasker (investigación básica) 2008",
+   "ambiguo": false
+  },
+  {
+   "nombre": "David Charbonneau",
+   "premio": "Premio Kavli de Astrofísica 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "David Jewitt",
+   "premio": "Premio Kavli de Astrofísica 2012",
+   "ambiguo": false
+  },
+  {
+   "nombre": "David Julius",
+   "premio": "Premio Kavli de Neurociencia 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "David Klenerman",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "David Liu",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2025",
+   "ambiguo": true
+  },
+  {
+   "nombre": "David Mumford",
+   "premio": "Premio Wolf de Matemáticas 2008",
+   "ambiguo": false
+  },
+  {
+   "nombre": "David Spergel",
+   "premio": "Breakthrough Prize en Física Fundamental",
+   "ambiguo": false
+  },
+  {
+   "nombre": "David Wineland",
+   "premio": "Premio Wolf de Física",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Demis Hassabis",
+   "premio": "Premio Lasker (investigación básica) 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Dennis Lo",
+   "premio": "Premio Lasker (investigación clínica) 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Dennis Slamon",
+   "premio": "Premio Lasker (investigación clínica) 2019",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Dennis Sullivan",
+   "premio": "Premio Wolf de Matemáticas 2010",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Didier Queloz",
+   "premio": "Premio Wolf de Física 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Dolph Schluter",
+   "premio": "Premio Crafoord 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Don Cleveland",
+   "premio": "Breakthrough Prize en Ciencias de la Vida",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Don Eigler",
+   "premio": "Premio Kavli de Nanociencia 2010",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Doris Tsao",
+   "premio": "Premio Kavli de Neurociencia 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Douglas Lowy",
+   "premio": "Premio Lasker (investigación clínica) 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Drew Weissman",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Edward Boyden",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Edward Witten",
+   "premio": "Breakthrough Prize en Física Fundamental 2012",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Edwin Southern",
+   "premio": "Premio Lasker (investigación clínica) 2005",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Elias James Corey",
+   "premio": "Premio Wolf de Química 1986",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Elizabeth Blackburn",
+   "premio": "Premio Lasker (investigación básica) 2006",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Elizabeth Neufeld",
+   "premio": "Premio Wolf de Medicina 1988",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ellen Sidransky",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Emmanuel JM Mignot",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Emmanuelle Charpentier",
+   "premio": "Premio Wolf de Medicina 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Eric Adelberger",
+   "premio": "Breakthrough Prize en Física Fundamental 2021",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Eric Kandel",
+   "premio": "Premio Wolf de Medicina 1999",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Eric Lander",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Erin Schuman",
+   "premio": "Premio Kavli de Neurociencia 2026",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Erkki Ruoslahti",
+   "premio": "Premio Lasker (investigación básica) 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Eugene Butcher",
+   "premio": "Premio Crafoord 2004",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Eva Andrei",
+   "premio": "Premio Kavli de Nanociencia 2026",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Eva Nogales",
+   "premio": "Premio Shaw de Ciencias de la Vida 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Eve Marder",
+   "premio": "Premio Kavli de Neurociencia 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Everett Peter Greenberg",
+   "premio": "Premio Shaw de Ciencias de la Vida 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ewine van Dishoeck",
+   "premio": "Premio Kavli de Astrofísica 2018",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Fabiola Gianotti",
+   "premio": "Breakthrough Prize en Física Fundamental 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ferenc Krausz",
+   "premio": "Premio Wolf de Física 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Frank Merle",
+   "premio": "Breakthrough Prize en Matemáticas 2026",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Franz-Ulrich Hartl",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Fred Ramsdell",
+   "premio": "Premio Crafoord 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Fredrick Van Goor",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Gary Hinshaw",
+   "premio": "Breakthrough Prize en Física Fundamental",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Gary Ruvkun",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Gayatri Spivak",
+   "premio": "Premio Holberg 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Geordie Williamson",
+   "premio": "Breakthrough Prize en Matemáticas 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Georg Nagel",
+   "premio": "Premio Shaw de Ciencias de la Vida 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "George Lusztig",
+   "premio": "Premio Wolf de Matemáticas 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Gerard 't Hooft",
+   "premio": "Premio Wolf de Física 1981",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Gerd Binnig",
+   "premio": "Premio Kavli de Nanociencia 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Gerhard Ertl",
+   "premio": "Premio Wolf de Química 1998",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Gero Miesenböck",
+   "premio": "Premio Shaw de Ciencias de la Vida 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Gilles Brassard",
+   "premio": "Breakthrough Prize en Física Fundamental 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Giorgio Parisi",
+   "premio": "Premio Wolf de Física 2021",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Graeme Clark",
+   "premio": "Premio Lasker (investigación clínica) 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Greg Lawler",
+   "premio": "Premio Wolf de Matemáticas 2019",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Gregg Semenza",
+   "premio": "Premio Lasker (investigación básica) 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Grigori Margulis",
+   "premio": "Premio Wolf de Matemáticas 2005",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Griselda Pollock",
+   "premio": "Premio Holberg 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Hans Clevers",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Harold Varmus",
+   "premio": "Premio Lasker (investigación básica) 1982",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Harry Gray",
+   "premio": "Premio Wolf de Química 2004",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Harry Noller",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Harry Orr",
+   "premio": "Premio Kavli de Neurociencia 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Harvey James Alter",
+   "premio": "Premio Lasker (investigación clínica) 2000",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Helen Hobbs",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Helmut Schwarz",
+   "premio": "Premio Wolf de Química 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Henri Boris Kagan",
+   "premio": "Premio Wolf de Química 2001",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Herbert Boyer",
+   "premio": "Premio Shaw de Ciencias de la Vida 2004",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Hillel Furstenberg",
+   "premio": "Premio Wolf de Matemáticas 2007",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Hiroaki Suga",
+   "premio": "Premio Wolf de Química 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Howard Cedar",
+   "premio": "Premio Wolf de Medicina 2008",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Huda Zoghbi",
+   "premio": "Premio Kavli de Neurociencia 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ian Agol",
+   "premio": "Breakthrough Prize en Matemáticas 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ingeborg Hochmair",
+   "premio": "Premio Lasker (investigación clínica) 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ingrid Daubechies",
+   "premio": "Premio Wolf de Matemáticas 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jack Strominger",
+   "premio": "Premio Lasker (investigación básica) 1995",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jack Szostak",
+   "premio": "Premio Lasker (investigación básica) 2006",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jacob Lurie",
+   "premio": "Breakthrough Prize en Matemáticas 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jacques Miller",
+   "premio": "Premio Lasker (investigación básica) 2019",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jainendra Jain",
+   "premio": "Premio Wolf de Física 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "James Allison",
+   "premio": "Premio Wolf de Medicina 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "James Arthur",
+   "premio": "Premio Wolf de Matemáticas 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "James Eisenstein",
+   "premio": "Premio Wolf de Física 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "James Fujimoto",
+   "premio": "Premio Lasker (investigación clínica) 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "James McKernan",
+   "premio": "Breakthrough Prize en Matemáticas 2018",
+   "ambiguo": false
+  },
+  {
+   "nombre": "James Rothman",
+   "premio": "Premio Kavli de Neurociencia 2010",
+   "ambiguo": false
+  },
+  {
+   "nombre": "James Spudich",
+   "premio": "Premio Lasker (investigación básica) 2012",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jane Luu",
+   "premio": "Premio Kavli de Astrofísica 2012",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jean Bennett",
+   "premio": "Breakthrough Prize en Ciencias de la Vida",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jean-François Le Gall",
+   "premio": "Premio Wolf de Matemáticas 2019",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jean-Louis Mandel",
+   "premio": "Premio Kavli de Neurociencia 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jean-Pierre Changeux",
+   "premio": "Premio Wolf de Medicina 1982",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jean-Pierre Serre",
+   "premio": "Premio Wolf de Matemáticas 2000",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jeffery Kelly",
+   "premio": "Premio Wolf de Química 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jeffrey Friedman",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jeffrey Hall",
+   "premio": "Premio Shaw de Ciencias de la Vida 2013",
+   "ambiguo": true
+  },
+  {
+   "nombre": "Jeffrey Ravetch",
+   "premio": "Premio Wolf de Medicina 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jennifer Doudna",
+   "premio": "Premio Wolf de Medicina 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jens Gundlach",
+   "premio": "Breakthrough Prize en Física Fundamental 2021",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jens Juul Holst",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jesús González",
+   "premio": "Premio Lasker (investigación clínica) 2025",
+   "ambiguo": true
+  },
+  {
+   "nombre": "Joan Steitz",
+   "premio": "Premio Wolf de Medicina 2021",
+   "ambiguo": false
+  },
+  {
+   "nombre": "John Clauser",
+   "premio": "Premio Wolf de Física 2010",
+   "ambiguo": false
+  },
+  {
+   "nombre": "John Glen",
+   "premio": "Premio Lasker (investigación clínica) 2018",
+   "ambiguo": false
+  },
+  {
+   "nombre": "John Gorman",
+   "premio": "Premio Lasker (investigación clínica) 1980",
+   "ambiguo": false
+  },
+  {
+   "nombre": "John Griggs Thompson",
+   "premio": "Premio Wolf de Matemáticas 1992",
+   "ambiguo": false
+  },
+  {
+   "nombre": "John Hardy",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "John Hartwig",
+   "premio": "Premio Wolf de Química 2019",
+   "ambiguo": false
+  },
+  {
+   "nombre": "John Henry Schwarz",
+   "premio": "Breakthrough Prize en Física Fundamental 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "John Hughes",
+   "premio": "Premio Lasker (investigación básica) 1978",
+   "ambiguo": true
+  },
+  {
+   "nombre": "John Kappler",
+   "premio": "Premio Wolf de Medicina 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "John Michael Jumper",
+   "premio": "Premio Lasker (investigación básica) 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "John Milnor",
+   "premio": "Premio Wolf de Matemáticas 1989",
+   "ambiguo": false
+  },
+  {
+   "nombre": "John O'Keefe",
+   "premio": "Premio Kavli de Neurociencia 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "John Pendry",
+   "premio": "Premio Kavli de Nanociencia 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "John Polanyi",
+   "premio": "Premio Wolf de Química 1982",
+   "ambiguo": false
+  },
+  {
+   "nombre": "John Schiller",
+   "premio": "Premio Lasker (investigación clínica) 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "John Ziegler",
+   "premio": "Premio Lasker (investigación clínica) 1972",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Joseph Hooton Taylor Jr.",
+   "premio": "Premio Wolf de Física 1992",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Joseph Leonard Goldstein",
+   "premio": "Premio Lasker (investigación básica) 1985",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Joshua Jortner",
+   "premio": "Premio Wolf de Química 1988",
+   "ambiguo": false
+  },
+  {
+   "nombre": "José-Alain Sahel",
+   "premio": "Premio Wolf de Medicina 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Juan Ignacio Cirac Sasturáin",
+   "premio": "Premio Wolf de Física 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Juan José Gómez Cadenas",
+   "premio": "Breakthrough Prize en Física Fundamental 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Juan Martín Maldacena",
+   "premio": "Breakthrough Prize en Física Fundamental 2012",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jules Hoffmann",
+   "premio": "Premio Shaw de Ciencias de la Vida 2011",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Julia Kristeva",
+   "premio": "Premio Holberg 2004",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jørgen Christensen-Dalsgaard",
+   "premio": "Premio Kavli de Astrofísica 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Jürgen Kocka",
+   "premio": "Premio Holberg 2011",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Kam-Biu Luk",
+   "premio": "Breakthrough Prize en Física Fundamental 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Karl Barry Sharpless",
+   "premio": "Premio Wolf de Química 2001",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Katalin Karikó",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Kazutoshi Mori",
+   "premio": "Premio Lasker (investigación básica) 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Kelsey Martin",
+   "premio": "Premio Kavli de Neurociencia 2026",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Kim Nasmyth",
+   "premio": "Breakthrough Prize en Ciencias de la Vida",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Kip Thorne",
+   "premio": "Premio Kavli de Astrofísica 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Knut Urban",
+   "premio": "Premio Kavli de Nanociencia 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Krzysztof Matyjaszewski",
+   "premio": "Premio Wolf de Química 2011",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Kunihiro Hattori",
+   "premio": "Premio Lasker (investigación clínica) 2026",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Lars Klareskog",
+   "premio": "Premio Crafoord 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Leland Hartwell",
+   "premio": "Premio Lasker (investigación básica) 1998",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Lennart Carleson",
+   "premio": "Premio Wolf de Matemáticas 1992",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Leroy Hood",
+   "premio": "Premio Lasker (investigación básica) 1987",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Leslie Leiserowitz",
+   "premio": "Premio Wolf de Química 2021",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Lewis Cantley",
+   "premio": "Premio Wolf de Medicina 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Lotte Bjerre Knudsen",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Luis Caffarelli",
+   "premio": "Premio Wolf de Matemáticas 2012",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Lyman Page",
+   "premio": "Breakthrough Prize en Física Fundamental",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Lyndal Roper",
+   "premio": "Premio Holberg 2026",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Lynne Maquat",
+   "premio": "Premio Wolf de Medicina 2021",
+   "ambiguo": false
+  },
+  {
+   "nombre": "László Lovász",
+   "premio": "Premio Wolf de Matemáticas 1999",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Makoto Fujita",
+   "premio": "Premio Wolf de Química 2018",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Maksim Kontsévich",
+   "premio": "Breakthrough Prize en Matemáticas 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Manuel Castells Oliván",
+   "premio": "Premio Holberg 2012",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Marc Feldmann",
+   "premio": "Premio Lasker (investigación clínica) 2003",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Marcus Raichle",
+   "premio": "Premio Kavli de Neurociencia 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Maria Jasin",
+   "premio": "Premio Shaw de Ciencias de la Vida 2019",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Marina Warner",
+   "premio": "Premio Holberg 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Mario Capecchi",
+   "premio": "Premio Wolf de Medicina 2002",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Mark Ptashne",
+   "premio": "Premio Lasker (investigación básica) 1997",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Martha Nussbaum",
+   "premio": "Premio Holberg 2021",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Martin Evans",
+   "premio": "Premio Lasker (investigación básica) 2001",
+   "ambiguo": true
+  },
+  {
+   "nombre": "Martin Hairer",
+   "premio": "Breakthrough Prize en Matemáticas 2021",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Martin Rees",
+   "premio": "Premio Wolf de Física 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Mary-Claire King",
+   "premio": "Premio Shaw de Ciencias de la Vida 2018",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Masashi Yanagisawa",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Max Dale Cooper",
+   "premio": "Premio Lasker (investigación básica) 2019",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Max Essex",
+   "premio": "Premio Lasker (investigación clínica) 1986",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Maximilian Haider",
+   "premio": "Premio Wolf de Física 2011",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Meir Lahav",
+   "premio": "Premio Wolf de Química 2021",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Meir Wilchek",
+   "premio": "Premio Wolf de Medicina 1987",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Melinda French",
+   "premio": "Premio Lasker (investigación básica)",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Michael Artin",
+   "premio": "Premio Wolf de Matemáticas 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Michael Aschbacher",
+   "premio": "Premio Wolf de Matemáticas 2012",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Michael Berry",
+   "premio": "Premio Wolf de Física 1998",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Michael Brown",
+   "premio": "Premio Kavli de Astrofísica 2012",
+   "ambiguo": true
+  },
+  {
+   "nombre": "Michael Cook",
+   "premio": "Premio Holberg 2014",
+   "ambiguo": true
+  },
+  {
+   "nombre": "Michael Green",
+   "premio": "Breakthrough Prize en Física Fundamental 2014",
+   "ambiguo": true
+  },
+  {
+   "nombre": "Michael Hall",
+   "premio": "Premio Lasker (investigación básica) 2017",
+   "ambiguo": true
+  },
+  {
+   "nombre": "Michael Hecht",
+   "premio": "Breakthrough Prize en Física Fundamental",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Michael Houghton",
+   "premio": "Premio Lasker (investigación clínica) 2000",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Michael Merzenich",
+   "premio": "Premio Kavli de Neurociencia 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Michael Rosbash",
+   "premio": "Premio Shaw de Ciencias de la Vida 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Michael Sofia",
+   "premio": "Premio Lasker (investigación clínica) 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Michael Stuart Brown",
+   "premio": "Premio Lasker (investigación básica) 1985",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Michael Welsh",
+   "premio": "Premio Lasker (investigación clínica) 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Michael Young",
+   "premio": "Premio Shaw de Ciencias de la Vida 2013",
+   "ambiguo": true
+  },
+  {
+   "nombre": "Michel Mayor",
+   "premio": "Premio Wolf de Física 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Michel Sadelain",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Michel della Negra",
+   "premio": "Breakthrough Prize en Física Fundamental 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Mijaíl Grómov",
+   "premio": "Premio Wolf de Matemáticas 1993",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Moti Heiblum",
+   "premio": "Premio Wolf de Física 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Nahum Sonenberg",
+   "premio": "Premio Wolf de Medicina 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Nancy Kanwisher",
+   "premio": "Premio Kavli de Neurociencia 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Napoleone Ferrara",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Nathan Seiberg",
+   "premio": "Breakthrough Prize en Física Fundamental 2012",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Netta Engelhardt",
+   "premio": "Breakthrough Prize en Física Fundamental 2021",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Nicholas Lydon",
+   "premio": "Premio Lasker (investigación clínica) 2009",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Nima Arkani-Hamed",
+   "premio": "Breakthrough Prize en Física Fundamental 2012",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Noga Alon",
+   "premio": "Premio Wolf de Matemáticas 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Norman Jarosik",
+   "premio": "Breakthrough Prize en Física Fundamental",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Omar Yaghi",
+   "premio": "Premio Wolf de Química 2018",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ondrej Krivanek",
+   "premio": "Premio Kavli de Nanociencia 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Onora O'Neill",
+   "premio": "Premio Holberg 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Oswald Steward",
+   "premio": "Premio Kavli de Neurociencia 2026",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Pablo Jarillo-Herrero",
+   "premio": "Premio Kavli de Nanociencia 2026",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Pamela Bjorkman",
+   "premio": "Premio Wolf de Medicina 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Pascal Mayer",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Pasko Rakic",
+   "premio": "Premio Kavli de Neurociencia 2008",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Patrick Cramer",
+   "premio": "Premio Shaw de Ciencias de la Vida 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Paul Alivisatos",
+   "premio": "Premio Kavli de Nanociencia 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Paul Corkum",
+   "premio": "Premio Wolf de Física 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Paul Gilroy",
+   "premio": "Premio Holberg 2019",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Paul Negulescu",
+   "premio": "Premio Lasker (investigación clínica) 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Paul Nurse",
+   "premio": "Premio Lasker (investigación básica) 1998",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Peter Doherty",
+   "premio": "Premio Lasker (investigación básica) 1995",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Peter Galison",
+   "premio": "Breakthrough Prize en Física Fundamental 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Peter Gregersen",
+   "premio": "Premio Crafoord 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Peter Ratcliffe",
+   "premio": "Premio Lasker (investigación básica) 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Peter Sarnak",
+   "premio": "Premio Wolf de Matemáticas 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Peter Schultz",
+   "premio": "Premio Wolf de Química 1994",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Peter Walter",
+   "premio": "Premio Shaw de Ciencias de la Vida 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Peter Zoller",
+   "premio": "Premio Wolf de Física 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Philippa Marrack",
+   "premio": "Premio Wolf de Medicina 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Phillip Allen Sharp",
+   "premio": "Premio Lasker (investigación básica) 1988",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Phillip Griffiths",
+   "premio": "Premio Wolf de Matemáticas 2008",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Pierre Deligne",
+   "premio": "Premio Wolf de Matemáticas 2008",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Pilar Ruiz-Lapuente",
+   "premio": "Breakthrough Prize en Física Fundamental 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Porter Anderson, Jr.",
+   "premio": "Premio Lasker (investigación clínica) 1996",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Rachel Schneerson",
+   "premio": "Premio Lasker (investigación clínica) 1996",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Rafi Bistritzer",
+   "premio": "Premio Wolf de Física 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ralf Bartenschlager",
+   "premio": "Premio Lasker (investigación clínica) 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ralph Brinster",
+   "premio": "Premio Wolf de Medicina 2002",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Randy Schekman",
+   "premio": "Premio Lasker (investigación básica) 2002",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Raphael David Levine",
+   "premio": "Premio Wolf de Química 1988",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ravinder Maini",
+   "premio": "Premio Lasker (investigación clínica) 2003",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Richard Lawrence Taylor",
+   "premio": "Breakthrough Prize en Matemáticas 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Richard Lifton",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Richard Scheller",
+   "premio": "Premio Lasker (investigación básica) 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Richard Schoen",
+   "premio": "Premio Wolf de Matemáticas 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Richard Youle",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2021",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Richard Zare",
+   "premio": "Premio Wolf de Química 2005",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Robert Bergman",
+   "premio": "Premio Wolf de Química 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Robert Fettiplace",
+   "premio": "Premio Kavli de Neurociencia 2018",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Robert Gallo",
+   "premio": "Premio Lasker (investigación clínica) 1986",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Robert Kirshner",
+   "premio": "Premio Wolf de Física 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Robert Langer",
+   "premio": "Premio Kavli de Neurociencia 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Robert Langlands",
+   "premio": "Premio Wolf de Matemáticas 1996",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Robert Lefkowitz",
+   "premio": "Premio Shaw de Ciencias de la Vida 2007",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Robert Roeder",
+   "premio": "Premio Lasker (investigación básica) 2003",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Robert Weinberg",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Robert Winchester",
+   "premio": "Premio Crafoord 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Roderick MacKinnon",
+   "premio": "Premio Lasker (investigación básica) 1999",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Rodrigo Ibata",
+   "premio": "Premio Kavli de Astrofísica 2026",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Roel Nusse",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Roger Angel",
+   "premio": "Premio Kavli de Astrofísica 2010",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Roger Brissenden",
+   "premio": "Breakthrough Prize en Física Fundamental",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Roger Penrose",
+   "premio": "Premio Wolf de Física 1988",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Roger Ulrich",
+   "premio": "Premio Kavli de Astrofísica 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Rolf Zinkernagel",
+   "premio": "Premio Lasker (investigación básica) 1995",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ronald Evans",
+   "premio": "Premio Wolf de Medicina 2012",
+   "ambiguo": true
+  },
+  {
+   "nombre": "Ronald Vale",
+   "premio": "Premio Shaw de Ciencias de la Vida 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Rosa Rademakers",
+   "premio": "Breakthrough Prize en Ciencias de la Vida",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Roy Kerr",
+   "premio": "Premio Crafoord 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Rudolf Jaenisch",
+   "premio": "Premio Wolf de Medicina 2011",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ruslan Medzhitov",
+   "premio": "Premio Shaw de Ciencias de la Vida 2011",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ruth Arnon",
+   "premio": "Premio Wolf de Medicina 1998",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ryōji Noyori",
+   "premio": "Premio Wolf de Química 2001",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Sabine Hadida",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Saharon Shelah",
+   "premio": "Premio Wolf de Matemáticas 2001",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Samuel Danishefsky",
+   "premio": "Premio Wolf de Química 1995",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Sara Seager",
+   "premio": "Premio Kavli de Astrofísica 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Saul Perlmutter",
+   "premio": "Breakthrough Prize en Física Fundamental 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Scott Emr",
+   "premio": "Premio Shaw de Ciencias de la Vida 2021",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Shankar Balasubramanian",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Shimon Sakaguchi",
+   "premio": "Premio Crafoord 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Shin'ya Yamanaka",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Shing-Tung Yau",
+   "premio": "Premio Wolf de Matemáticas 2010",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Silvia Amerio",
+   "premio": "Breakthrough Prize en Física Fundamental 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Simon Donaldson",
+   "premio": "Premio Wolf de Matemáticas 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Solomon Snyder",
+   "premio": "Premio Wolf de Medicina 1982",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Stanley Norman Cohen",
+   "premio": "Premio Shaw de Ciencias de la Vida 2004",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Stanley Prusiner",
+   "premio": "Premio Wolf de Medicina 1995",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Sten Grillner",
+   "premio": "Premio Kavli de Neurociencia 2008",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Stephen Buchwald",
+   "premio": "Premio Wolf de Química 2019",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Stephen Elledge",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2017",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Stephen Greenblatt",
+   "premio": "Premio Holberg 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Stephen Hauser",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Stephen Smale",
+   "premio": "Premio Wolf de Matemáticas 2007",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Stuart Orkin",
+   "premio": "Premio Shaw de Ciencias de la Vida 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Stuart Schreiber",
+   "premio": "Premio Wolf de Química 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Sumio Iijima",
+   "premio": "Premio Kavli de Nanociencia 2008",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Svante Pääbo",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Svetlana Mojsov",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Swee Lay Thein",
+   "premio": "Premio Shaw de Ciencias de la Vida 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Syukuro Manabe",
+   "premio": "Premio Crafoord 2018",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Tadamitsu Kishimoto",
+   "premio": "Premio Crafoord 2009",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Takaaki Kajita",
+   "premio": "Breakthrough Prize en Física Fundamental 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Takehisa Kitazawa",
+   "premio": "Premio Lasker (investigación clínica) 2026",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Terence Tao",
+   "premio": "Breakthrough Prize en Matemáticas 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Thomas Ebbesen",
+   "premio": "Premio Kavli de Nanociencia 2014",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Thomas Gasser",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Thomas Robert Cech",
+   "premio": "Premio Lasker (investigación básica) 1988",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Thomas Südhof",
+   "premio": "Premio Lasker (investigación básica) 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Timothy Springer",
+   "premio": "Premio Lasker (investigación básica) 2022",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Titia de Lange",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Tony Hunter",
+   "premio": "Premio Wolf de Medicina 2005",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Toshio Hirano",
+   "premio": "Premio Crafoord 2009",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Tracy Slatyer",
+   "premio": "Breakthrough Prize en Física Fundamental",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Tu Youyou",
+   "premio": "Premio Lasker (investigación clínica) 2011",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Vasily Belokurov",
+   "premio": "Premio Kavli de Astrofísica 2026",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Victor Ambros",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2015",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Vincent DeVita",
+   "premio": "Premio Lasker (investigación clínica) 1972",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Vincent Lafforgue",
+   "premio": "Breakthrough Prize en Matemáticas 2018",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Virginia M.-Y. Lee",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Virginijus Šikšnys",
+   "premio": "Premio Kavli de Nanociencia 2018",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Vladímir Drínfeld",
+   "premio": "Premio Wolf de Matemáticas 2018",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Walter Gilbert",
+   "premio": "Premio Lasker (investigación básica) 1979",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Wang Yifang",
+   "premio": "Breakthrough Prize en Física Fundamental 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "William Kaelin",
+   "premio": "Premio Lasker (investigación básica) 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Winfried Denk",
+   "premio": "Premio Kavli de Neurociencia 2012",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Winrich Freiwald",
+   "premio": "Premio Kavli de Neurociencia 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Wolfgang Baumeister",
+   "premio": "Premio Shaw de Ciencias de la Vida 2025",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Xiaodong Wang",
+   "premio": "Premio Shaw de Ciencias de la Vida 2006",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Xiaowei Zhuang",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2019",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Xie Chen",
+   "premio": "Breakthrough Prize en Física Fundamental",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Yakir Aharonov",
+   "premio": "Premio Wolf de Física 1998",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Yakov Eliashberg",
+   "premio": "Premio Wolf de Matemáticas 2020",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Yoichiro Suzuki",
+   "premio": "Breakthrough Prize en Física Fundamental 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Yuet Wai Kan",
+   "premio": "Premio Shaw de Ciencias de la Vida 2004",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Yákov Sinái",
+   "premio": "Premio Wolf de Matemáticas 1997",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Zhijian James Chen",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2019",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Zhiwei Yun",
+   "premio": "Breakthrough Prize en Matemáticas",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Zsolt Frei",
+   "premio": "Breakthrough Prize en Física Fundamental 2016",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ōsumi Yoshinori",
+   "premio": "Breakthrough Prize en Ciencias de la Vida 2017",
+   "ambiguo": false
+  }
+ ]
+}
