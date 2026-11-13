@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-13T11:49:03Z",
+ "actualizado": "2026-11-13T12:20:15Z",
  "laureados": [
   {
    "nombre": "Aaron Naber",
@@ -88,7 +88,7 @@
   },
   {
    "nombre": "Alexander Beilinson",
-   "premio": "Premio Wolf de Matemáticas 2018",
+   "premio": "Premio Shaw 2020",
    "ambiguo": false
   },
   {
@@ -392,6 +392,11 @@
    "ambiguo": false
   },
   {
+   "nombre": "Claire Voisin",
+   "premio": "Premio Shaw 2017",
+   "ambiguo": false
+  },
+  {
    "nombre": "Clay Armstrong",
    "premio": "Premio Lasker (investigación básica) 1999",
    "ambiguo": false
@@ -447,6 +452,11 @@
    "ambiguo": false
   },
   {
+   "nombre": "David Donoho",
+   "premio": "Premio Shaw",
+   "ambiguo": false
+  },
+  {
    "nombre": "David Jewitt",
    "premio": "Premio Kavli de Astrofísica 2012",
    "ambiguo": false
@@ -473,12 +483,17 @@
   },
   {
    "nombre": "David Spergel",
-   "premio": "Breakthrough Prize en Física Fundamental",
+   "premio": "Premio Shaw 2010",
    "ambiguo": false
   },
   {
    "nombre": "David Wineland",
    "premio": "Premio Wolf de Física",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Demetrios Christodoulou",
+   "premio": "Premio Shaw 2011",
    "ambiguo": false
   },
   {
@@ -537,6 +552,11 @@
    "ambiguo": false
   },
   {
+   "nombre": "Duncan Lorimer",
+   "premio": "Premio Shaw 2023",
+   "ambiguo": false
+  },
+  {
    "nombre": "Edward Boyden",
    "premio": "Breakthrough Prize en Ciencias de la Vida 2015",
    "ambiguo": false
@@ -549,6 +569,11 @@
   {
    "nombre": "Edwin Southern",
    "premio": "Premio Lasker (investigación clínica) 2005",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Ehud Hrushovski",
+   "premio": "Premio Shaw 2022",
    "ambiguo": false
   },
   {
@@ -682,6 +707,11 @@
    "ambiguo": false
   },
   {
+   "nombre": "Geoffrey Marcy",
+   "premio": "Premio Shaw 2005",
+   "ambiguo": false
+  },
+  {
    "nombre": "Geordie Williamson",
    "premio": "Breakthrough Prize en Matemáticas 2017",
    "ambiguo": false
@@ -794,6 +824,11 @@
   {
    "nombre": "Henri Boris Kagan",
    "premio": "Premio Wolf de Química 2001",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Henryk Iwaniec",
+   "premio": "Premio Shaw 2015",
    "ambiguo": false
   },
   {
@@ -1088,12 +1123,17 @@
   },
   {
    "nombre": "Jules Hoffmann",
-   "premio": "Premio Shaw de Ciencias de la Vida 2011",
+   "premio": "Premio Shaw 2011",
    "ambiguo": false
   },
   {
    "nombre": "Julia Kristeva",
    "premio": "Premio Holberg 2004",
+   "ambiguo": false
+  },
+  {
+   "nombre": "János Kollár",
+   "premio": "Premio Shaw 2017",
    "ambiguo": false
   },
   {
@@ -1169,6 +1209,11 @@
   {
    "nombre": "Lennart Carleson",
    "premio": "Premio Wolf de Matemáticas 1992",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Lennart Lindegren",
+   "premio": "Premio Shaw 2022",
    "ambiguo": false
   },
   {
@@ -1292,6 +1337,16 @@
    "ambiguo": false
   },
   {
+   "nombre": "Matthew Bailes",
+   "premio": "Premio Shaw 2023",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Maura McLaughlin",
+   "premio": "Premio Shaw 2023",
+   "ambiguo": false
+  },
+  {
    "nombre": "Max Dale Cooper",
    "premio": "Premio Lasker (investigación básica) 2019",
    "ambiguo": false
@@ -1372,6 +1427,11 @@
    "ambiguo": false
   },
   {
+   "nombre": "Michael Perryman",
+   "premio": "Premio Shaw 2022",
+   "ambiguo": false
+  },
+  {
    "nombre": "Michael Rosbash",
    "premio": "Premio Shaw de Ciencias de la Vida 2013",
    "ambiguo": false
@@ -1404,6 +1464,11 @@
   {
    "nombre": "Michel Sadelain",
    "premio": "Breakthrough Prize en Ciencias de la Vida 2024",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Michel Talagrand",
+   "premio": "Premio Shaw 2019",
    "ambiguo": false
   },
   {
@@ -1547,6 +1612,11 @@
    "ambiguo": false
   },
   {
+   "nombre": "Peter Goldreich",
+   "premio": "Premio Shaw",
+   "ambiguo": false
+  },
+  {
    "nombre": "Peter Gregersen",
    "premio": "Premio Crafoord 2013",
    "ambiguo": false
@@ -1574,6 +1644,11 @@
   {
    "nombre": "Peter Zoller",
    "premio": "Premio Wolf de Física 2013",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Philip James Edwin Peebles",
+   "premio": "Premio Shaw",
    "ambiguo": false
   },
   {
@@ -1848,7 +1923,7 @@
   },
   {
    "nombre": "Shing-Tung Yau",
-   "premio": "Premio Wolf de Matemáticas 2010",
+   "premio": "Premio Shaw 2023",
    "ambiguo": false
   },
   {
@@ -1904,6 +1979,11 @@
   {
    "nombre": "Stephen Smale",
    "premio": "Premio Wolf de Matemáticas 2007",
+   "ambiguo": false
+  },
+  {
+   "nombre": "Steven Balbus",
+   "premio": "Premio Shaw",
    "ambiguo": false
   },
   {
@@ -2043,7 +2123,7 @@
   },
   {
    "nombre": "Vladímir Drínfeld",
-   "premio": "Premio Wolf de Matemáticas 2018",
+   "premio": "Premio Shaw 2023",
    "ambiguo": false
   },
   {

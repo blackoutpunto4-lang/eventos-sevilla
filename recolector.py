@@ -2,7 +2,9 @@
 """
 recolector.py  -  Recoge charlas universitarias y torneos de ajedrez de Sevilla y genera eventos.json
 
-Charlas: Eventos UPO (ICS), Eventos US (RSS), DivulgaUS, IBiS, Facultad de Física y Fundación Cajasol.
+Charlas (solo mates, física, biología, química y filosofía): Eventos UPO (ICS), Eventos US (RSS),
+IMUS, Matemática Aplicada I, CABD, DivulgaUS, IBiS, Facultad de Física, cicCartuja,
+Casa de la Ciencia y Fundación Cajasol.
 Laureados: lista oficial de los Nobel (se actualiza sola) + laureados.json (Fields, Turing, Abel).
 Prensa: pistas de visitas de laureados en Google Noticias.
 Torneos: Delegación Sevillana de Ajedrez + calendario FADA (lee las bases en PDF).
@@ -29,7 +31,7 @@ import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
-from urllib.parse import quote_plus, urljoin
+from urllib.parse import quote_plus, urlencode, urljoin
 
 # Usa los certificados de Windows (evita el error CERTIFICATE_VERIFY_FAILED en algunos PC).
 # Es opcional: si no está instalado, Python usa sus certificados normales.
@@ -49,6 +51,8 @@ CARPETA = Path(__file__).resolve().parent
 SALIDA = CARPETA / "eventos.json"
 ARCHIVO_LAUREADOS = CARPETA / "laureados.json"
 USER_AGENT = "Mozilla/5.0 (compatible; EventosSevilla/1.0)"
+# Algunas webs (el CABD, por ejemplo) rechazan a los robots educados; para ellas se usa este otro.
+USER_AGENT_NAVEGADOR = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
 
 FUENTES = [
     # (código, tipo de lector, nombre para mostrar, url)
@@ -82,10 +86,13 @@ FRASES_CURSO = re.compile(r"(?:inicio|apertura|inauguracion|comienzo|fin|clausur
                           r"curso\s+academico|curso\s+20\d\d")
 # Menciones suaves a un premio de nivel Nobel
 MENCION_PREMIO = re.compile(
-    r"\b(nobel|medalla fields|fields medal|premio turing|turing award|premio abel|abel prize)\b"
+    r"\b(nobel|medalla fields|fields medal|premio turing|turing award|premio abel|abel prize|"
+    r"premio lasker|lasker award|premio kavli|kavli prize|breakthrough prize|premio breakthrough|"
+    r"premio wolf|wolf prize|premio shaw|shaw prize|premio crafoord|crafoord prize|premio holberg)\b"
 )
 # Para nombres muy comunes: solo cuentan si el texto también habla de un premio
-CONTEXTO_PREMIO = re.compile(r"\b(nobel|fields|turing|abel|laureado|laureada|laureate)\b")
+CONTEXTO_PREMIO = re.compile(r"\b(nobel|fields|turing|abel|lasker|kavli|breakthrough|wolf|shaw|crafoord|holberg|"
+                             r"laureado|laureada|laureate|galardonado|galardonada)\b")
 
 # Si el lugar menciona una de estas ciudades (y no menciona Sevilla), se descarta
 OTRAS_CIUDADES = re.compile(
@@ -209,6 +216,121 @@ def actualizar_laureados_nobel(forzar=False):
     return datos
 
 
+# ----------------------------------------------------------------------------
+# Otros premios de nivel Nobel (Lasker, Kavli, Breakthrough, Wolf, Shaw, Crafoord, Holberg)
+# Se sacan de Wikidata (una consulta al mes). Fields, Turing y Abel están en laureados.json.
+# ----------------------------------------------------------------------------
+ARCHIVO_PREMIOS = CARPETA / "laureados_premios.json"
+DIAS_RENOVAR_PREMIOS = 30
+URL_WIKIDATA = "https://query.wikidata.org/sparql"
+PREMIOS_WIKIDATA = {
+    "Q999734": "Premio Lasker (investigación básica)",
+    "Q136696": "Premio Lasker (investigación clínica)",
+    "Q18889778": "Premio Kavli de Astrofísica",
+    "Q18889779": "Premio Kavli de Nanociencia",
+    "Q18889781": "Premio Kavli de Neurociencia",
+    "Q1314470": "Breakthrough Prize en Física Fundamental",
+    "Q17278380": "Breakthrough Prize en Matemáticas",
+    "Q5019489": "Breakthrough Prize en Ciencias de la Vida",
+    "Q845333": "Premio Wolf de Física",
+    "Q915604": "Premio Wolf de Matemáticas",
+    "Q968876": "Premio Wolf de Química",
+    "Q540561": "Premio Wolf de Medicina",
+    "Q57202753": "Premio Shaw de Ciencias de la Vida",
+    "Q584250": "Premio Shaw",
+    "Q583069": "Premio Crafoord",
+    "Q1624297": "Premio Holberg",
+}
+
+
+def _consulta_premios():
+    valores = " ".join("wd:" + q for q in PREMIOS_WIKIDATA)
+    return ("SELECT ?personaLabel ?premio ?anio WHERE { VALUES ?premio { " + valores + " } "
+            "?persona p:P166 ?s . ?s ps:P166 ?premio . "
+            "OPTIONAL { ?s pq:P585 ?f . BIND(YEAR(?f) AS ?anio) } "
+            "?persona wdt:P31 wd:Q5 . FILTER NOT EXISTS { ?persona wdt:P570 ?muerte } "
+            'SERVICE wikibase:label { bd:serviceParam wikibase:language "es,en". } }')
+
+
+def laureados_desde_filas(filas):
+    """Convierte las filas de Wikidata (persona, premio, año) en la lista de laureados.
+    Una entrada por persona, con su premio más reciente."""
+    por_persona = {}
+    for f in filas:
+        nombre = _sin_iniciales(f["personaLabel"]["value"]).strip()
+        qid = f["premio"]["value"].rsplit("/", 1)[-1]
+        if qid not in PREMIOS_WIKIDATA:
+            continue
+        # fuera: etiquetas sin traducir (Q123...), nombres de una sola palabra
+        # e investigadores citados solo con inicial ("R. Aaij", de colaboraciones enormes)
+        if re.fullmatch(r"Q\d+", nombre) or len(nombre.split()) < 2:
+            continue
+        if re.match(r"^[A-Z]\.", f["personaLabel"]["value"].strip()):
+            continue
+        try:
+            anio = int(f["anio"]["value"]) if "anio" in f else 0
+        except ValueError:
+            anio = 0
+        previo = por_persona.get(nombre)
+        if previo is None or anio > previo[0]:
+            por_persona[nombre] = (anio, qid)
+    lista = []
+    for nombre, (anio, qid) in sorted(por_persona.items()):
+        partes = normalizar(nombre).split()
+        comun = len(partes) <= 2 and partes[0] in NOMBRES_COMUNES and partes[-1] in APELLIDOS_COMUNES
+        etiqueta = PREMIOS_WIKIDATA[qid] + (f" {anio}" if anio else "")
+        lista.append({"nombre": nombre, "premio": etiqueta, "ambiguo": bool(comun)})
+    return lista
+
+
+def _leer_cache_premios():
+    try:
+        with open(ARCHIVO_PREMIOS, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return None
+
+
+def actualizar_laureados_premios(forzar=False):
+    """Renueva (como mucho una vez al mes) la lista de ganadores vivos de los demás premios.
+    Wikidata a veces limita las consultas: se reintenta y, si no hay manera, se usa la copia anterior."""
+    antiguo = _leer_cache_premios()
+    if antiguo and not forzar:
+        try:
+            hecho = datetime.strptime(antiguo["actualizado"], "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+            if datetime.now(timezone.utc) - hecho < timedelta(days=DIAS_RENOVAR_PREMIOS):
+                return antiguo
+        except Exception:
+            pass
+    url = URL_WIKIDATA + "?format=json&query=" + quote_plus(_consulta_premios())
+    ultimo_error = None
+    for intento in range(3):
+        try:
+            peticion = urllib.request.Request(url, headers={"User-Agent": USER_AGENT,
+                                                            "Accept": "application/sparql-results+json"})
+            with urllib.request.urlopen(peticion, timeout=120) as r:
+                filas = json.loads(r.read().decode("utf-8"))["results"]["bindings"]
+            lista = laureados_desde_filas(filas)
+            if len(lista) < 50:
+                raise ValueError("Wikidata devolvió muy pocos laureados")
+            datos = {"actualizado": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "laureados": lista}
+            with open(ARCHIVO_PREMIOS, "w", encoding="utf-8") as f:
+                json.dump(datos, f, ensure_ascii=False, indent=1)
+            return datos
+        except urllib.error.HTTPError as e:
+            ultimo_error = e
+            if e.code != 429 or intento == 2:
+                break
+            time.sleep(65)      # Wikidata pide esperar un minuto entre consultas
+        except Exception as e:
+            ultimo_error = e
+            break
+    if antiguo:
+        print(f"[AVISO] No se pudo renovar la lista de otros premios ({str(ultimo_error)[:60]}); uso la anterior")
+        return antiguo
+    raise ultimo_error or ValueError("no se pudo obtener la lista de otros premios")
+
+
 def cargar_laureados():
     """Lista combinada: Nobel desde la API oficial (si está) + Fields/Turing/Abel de laureados.json."""
     with open(ARCHIVO_LAUREADOS, encoding="utf-8") as f:
@@ -226,7 +348,8 @@ def cargar_laureados():
         automaticos = [dict(d, ambiguo=d.get("ambiguo") or normalizar(d["nombre"]) in comunes)
                        for d in automaticos]
         manual = [d for d in manual if not d["premio"].startswith("Nobel")]
-    return _patrones_laureados(automaticos + manual)
+    premios = (_leer_cache_premios() or {}).get("laureados", [])
+    return _patrones_laureados(automaticos + manual + premios)
 
 
 def _patrones_laureados(entradas):
@@ -310,14 +433,15 @@ def analizar_laureado(titulo, descripcion, laureados):
 # ----------------------------------------------------------------------------
 # Descarga
 # ----------------------------------------------------------------------------
-def descargar_bytes(url):
-    peticion = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+def descargar_bytes(url, datos=None, agente=None):
+    cuerpo = urlencode(datos).encode() if datos else None       # con datos, la petición es POST
+    peticion = urllib.request.Request(url, data=cuerpo, headers={"User-Agent": agente or USER_AGENT})
     with urllib.request.urlopen(peticion, timeout=40) as r:
         return r.read()
 
 
-def descargar(url, codificacion="utf-8"):
-    return descargar_bytes(url).decode(codificacion, errors="replace")
+def descargar(url, codificacion="utf-8", datos=None, agente=None):
+    return descargar_bytes(url, datos, agente).decode(codificacion, errors="replace")
 
 
 # ----------------------------------------------------------------------------
@@ -328,6 +452,8 @@ def leer_ics(texto):
     texto = re.sub(r"\r?\n[ \t]", "", texto)  # une las líneas largas partidas
     eventos = []
     for bloque in re.findall(r"BEGIN:VEVENT(.*?)END:VEVENT", texto, re.S):
+        # fuera los avisos de recordatorio: traen su propio SUMMARY y pisarían el del evento
+        bloque = re.sub(r"BEGIN:VALARM.*?END:VALARM", "", bloque, flags=re.S)
         campos = {}
         for linea in bloque.strip().splitlines():
             if ":" not in linea:
@@ -420,6 +546,56 @@ def _excluida(titulo_norm):
     """¿El título tiene una palabra que descarta el evento (taller, curso, concierto...)?"""
     return bool(PALABRAS_EXCLUIR.search(FRASES_CURSO.sub(" ", titulo_norm)))
 
+# ----------------------------------------------------------------------------
+# Temas que interesan: matemáticas, física, biología, química y filosofía.
+# Una charla sin tema reconocido se descarta (salvo que la dé un laureado o mencione un premio).
+# ----------------------------------------------------------------------------
+TEMAS = [
+    ("matemáticas", re.compile(
+        r"matematic|algebra|geometri|topolog|matroide|combinatoria|teoria de (numeros|grafos|juegos)|"
+        r"ecuaciones (diferenciales|en derivadas)|analisis (matematico|numerico|funcional)|calculo\b|"
+        r"estadistic|probabilidad|proceso estocastico|optimizacion|investigacion operativa|"
+        r"numeros primos|teorema|conjetura|homolog|homotop|variedades|fractal|criptograf|"
+        r"\bgrafos\b|cuadrados latinos|hadamard|infinito\b|\bimus\b")),
+    ("física", re.compile(
+        r"\bfisic|cuantic|particulas? elementales|atomic[ao]|\batomos?\b|nuclear|astrofisic|astronom|"
+        r"cosmolog|universo|galaxia|agujeros? negros?|neutrino|materia oscura|relatividad|"
+        r"termodinamic|electromagnetismo|\boptica\b|laser|plasma\b|fusion nuclear|fotonic|"
+        r"superconduct|semiconductor|grafeno|nanocienc|nanotecnolog|aeroespacial|satelites?\b|"
+        r"astronaut|espacial|gravit|acelerador de particulas|radiacion|\bsol\b|estrellas?\b|planetas?\b")),
+    ("biología", re.compile(
+        r"biolog|biomedicina|genetic|genomic|\bgen\b|\bgenes\b|celulas?\b|celular|molecular|"
+        r"ecolog|evolucion|evolutiv|especies\b|biodiversidad|microbio|bacteria|\bvirus\b|virolog|"
+        r"neurocienc|neuronas?\b|cerebro|proteinas?\b|\badn\b|\barn\b|\bdna\b|\brna\b|enzima|"
+        r"fotosintesis|embrion|organismo|inmunolog|zoolog|botanic|insectos?\b|\baves\b|anfibio|"
+        r"mamifero|pez cebra|drosophila|polinizad|ecosistema|crispr|levadura|parasito|plantas?\b")),
+    ("química", re.compile(
+        r"quimic|bioquimic|catalisis|catalizador|\bsintesis\b|polimer|organometal|electroquim|"
+        r"carbohidrat|ciclodextrin|cristalograf|tabla periodica|\bmoleculas?\b|espectroscop|"
+        r"espectrometria|cromatograf|ciencia de materiales|nanomaterial|\biones?\b|isotop")),
+    ("filosofía", re.compile(
+        r"filosof|\betica\b|epistemolog|metafisic|fenomenolog|ontolog|hermeneutic|estetica\b|"
+        r"historia del pensamiento|\blogica\b|nietzsche|kant\b|aristoteles|platon\b|wittgenstein|"
+        r"husserl|heidegger|descartes|spinoza|\bhume\b|ortega y gasset|existencialis")),
+]
+
+# Fuentes especializadas: sus charlas tienen tema aunque el título no use palabras clave.
+FUENTE_TEMA = {
+    "IBiS (Instituto de Biomedicina de Sevilla)": "biología",
+    "Facultad de Física (US)": "física",
+    "IMUS (Instituto de Matemáticas)": "matemáticas",
+    "Matemática Aplicada I (US)": "matemáticas",
+    "CABD (Biología del Desarrollo)": "biología",
+    "EBD (Estación Biológica de Doñana)": "biología",
+    "cicCartuja": "química",
+}
+
+
+def detectar_temas(texto_normalizado):
+    """Lista de temas que encajan con el texto (ya normalizado, sin acentos)."""
+    return [nombre for nombre, patron in TEMAS if patron.search(texto_normalizado)]
+
+
 
 def clasificar(ev, laureados, hoy):
     """Devuelve (evento_final | None, motivo_descarte | None)."""
@@ -450,6 +626,14 @@ def clasificar(ev, laureados, hoy):
     if not (ponente or es_charla or (menciona_en_titulo and not excluida)):
         return None, "no parece una charla"
 
+    # 4) Tema: solo matemáticas, física, biología, química y filosofía
+    temas = detectar_temas(normalizar(ev["titulo"] + " . " + descripcion[:1200]))
+    tema_fuente = FUENTE_TEMA.get(ev.get("fuente") or "")
+    if tema_fuente and tema_fuente not in temas:
+        temas.append(tema_fuente)
+    if not temas and not (ponente or tema or menciona):
+        return None, "tema que no interesa"
+
     lugar = re.sub(r",\s*Espa[ñn]a\s*$", "", ev.get("lugar") or "").strip()
     inicio = ev["inicio"]
     final = {
@@ -458,11 +642,12 @@ def clasificar(ev, laureados, hoy):
         "fecha": inicio.strftime("%Y-%m-%d"),
         "hora": inicio.strftime("%H:%M") if ev["con_hora"] else None,
         "lugar": lugar or None,
-        "tipo": "charla",
+        "tipo": "premio" if ponente else "charla",   # categoría propia si un laureado da la charla
         "destacado": bool(ponente),
         "laureado": ponente,
         "laureadoTema": tema,
         "mencionaNobel": menciona,
+        "tema": temas[0] if temas else None,
         "url": (ev.get("url") or "").replace("http://", "https://") or None,
         "fuente": ev["fuente"],
     }
@@ -784,7 +969,63 @@ def fusionar_torneos(fada, fsa):
     return salida
 
 
-def torneo_a_evento(t, hoy, cache_pdf):
+# ----- Ritmo de juego: solo interesan los torneos de ritmo clásico (lento) -----
+# Regla de la FIDE: tiempo total = minutos base + segundos de incremento (para unas 60 jugadas).
+#   60 min o más -> clásico · entre 10 y 60 -> rápido · 10 o menos -> blitz
+PALABRAS_BLITZ = re.compile(r"\b(blitz|relampago|bullet)\b")
+PALABRAS_RAPIDO = re.compile(r"\b(rapid[ao]s?|semirrapid[ao]s?|semi-rapid[ao]s?)\b")
+NOMBRES_RITMO = {"clasico": "clásico", "rapido": "rápido", "blitz": "blitz", "desconocido": "sin confirmar"}
+
+
+def _tiempo_formato(formato):
+    """'Suizo · 90 min + 30 seg · 7 rondas' -> (90, 30)."""
+    m = re.search(r"(\d{1,3})\s*min(?:\s*\+\s*(\d{1,4})\s*seg)?", formato or "")
+    return (int(m.group(1)), int(m.group(2) or 0)) if m else None
+
+
+def _tiempo_en(ventana):
+    m = re.search(r"(\d{1,3})\s*(?:'|min(?:utos?)?\b)?\s*(?:\+|mas|con)\s*(\d{1,3})\s*(?:''|\"|seg(?:undos?)?\b|s\b)", ventana)
+    if m:
+        return int(m.group(1)), int(m.group(2))
+    m = re.search(r"(\d{1,3})\s*(?:'|min(?:utos?)?\b)", ventana)
+    if m:
+        return int(m.group(1)), 0
+    m = re.search(r"\b(\d)\s*(?:h|horas?)\b(?:\s*(?:y\s*)?(\d{1,2})\s*(?:min(?:utos?)?\b|'))?", ventana)
+    if m:
+        return int(m.group(1)) * 60 + int(m.group(2) or 0), 0
+    return None
+
+
+def ritmo_en_bases(texto):
+    """Busca en las bases algo como 'Ritmo de juego: 90 minutos + 30 segundos por jugada'."""
+    n = normalizar(texto)
+    for m in re.finditer(r"(ritmo(?:\s+de\s+juego)?|tiempo\s+de\s+reflexion|control\s+de\s+tiempo|"
+                         r"cadencia|tiempo\s+de\s+juego)", n):
+        encontrado = _tiempo_en(n[m.end():m.end() + 260])
+        if encontrado:
+            return encontrado
+    return None
+
+
+def clasificar_ritmo(formato, titulo, texto_bases=""):
+    """Devuelve (ritmo, nota) con ritmo = clasico | rapido | blitz | desconocido."""
+    titulo_n = normalizar(titulo)
+    if PALABRAS_BLITZ.search(titulo_n):
+        return "blitz", "el título dice blitz"
+    if PALABRAS_RAPIDO.search(titulo_n):
+        return "rapido", "el título dice rápidas"
+    for par in (_tiempo_formato(formato), ritmo_en_bases(texto_bases)):
+        if par:
+            base, inc = par
+            if inc > 120:          # un incremento de más de 2 minutos por jugada no tiene sentido: se ignora
+                inc = 0
+            total = base + inc
+            nota = f"{base} min" + (f" + {inc} s" if inc else "")
+            return ("clasico" if total >= 60 else "rapido" if total > 10 else "blitz"), nota
+    return "desconocido", None
+
+
+def torneo_a_evento(t, hoy, cache_pdf, descartados=None):
     ultimo = t["fin"] or t["ini"]
     if ultimo < hoy:
         return None
@@ -801,6 +1042,11 @@ def torneo_a_evento(t, hoy, cache_pdf):
         if cache_pdf[url]:
             texto_bases = cache_pdf[url]
             break
+    ritmo, ritmo_nota = clasificar_ritmo(t["formato"], t["titulo"], texto_bases)
+    if ritmo in ("rapido", "blitz"):       # solo interesa el ritmo clásico
+        if descartados is not None:
+            descartados.append((t["titulo"], f"ritmo {NOMBRES_RITMO[ritmo]}: {ritmo_nota}"))
+        return None
     if texto_bases.strip():
         estado, nota = detectar_federacion(texto_bases)
     elif errores:
@@ -826,6 +1072,8 @@ def torneo_a_evento(t, hoy, cache_pdf):
         "federacion": estado,
         "federacionNota": nota,
         "formato": t["formato"],
+        "ritmo": ritmo,
+        "ritmoNota": ritmo_nota,
         "url": t["bases"] or t["bases_alt"] or t["web"],
         "urlInfo": t["info"],
         "fuente": " + ".join(t["fuentes"]),
@@ -853,11 +1101,13 @@ def recolectar_torneos(hoy):
                 print("        -> Problema de certificados de tu PC. Ejecuta:  pip install truststore")
     if PdfReader is None:
         print("[AVISO] Falta 'pypdf': no se leerán las bases. Ejecuta:  pip install pypdf")
-    cache_pdf, eventos = {}, []
+    cache_pdf, eventos, descartados = {}, [], []
     for t in fusionar_torneos(fada, fsa):
-        ev = torneo_a_evento(t, hoy, cache_pdf)
+        ev = torneo_a_evento(t, hoy, cache_pdf, descartados)
         if ev:
             eventos.append(ev)
+    for titulo, motivo in descartados:
+        print(f"       torneo descartado ({motivo}): {titulo[:70]}")
     return eventos, ok, fallidas
 
 
@@ -1363,10 +1613,362 @@ def pistas_prensa(hoy, laureados):
     return resultado[:PRENSA_MAXIMO]
 
 
+
+# ---------------------------------------------------------------------------
+# IMUS (Instituto de Matemáticas de la Universidad de Sevilla)
+# La portada lleva la lista "Próximas actividades"; cada ficha se pide por el
+# mismo canal que usa la propia web (una petición POST).
+# ---------------------------------------------------------------------------
+NOMBRE_IMUS = "IMUS (Instituto de Matemáticas)"
+URL_IMUS = "https://imus.us.es/"
+URL_IMUS_FICHA = "https://imus.us.es/www_content/www_content.php"
+IMUS_CAT_EXCLUIR = re.compile(r"tesis|doc-?course|workshop|congreso|\bcursos?\b", re.I)
+
+
+def parsear_portada_imus(pagina):
+    """Lee las actividades de la portada: id, título, categoría y fechas."""
+    sin_comentarios = re.sub(r"<!--.*?-->", "", pagina, flags=re.S)
+    items = []
+    for bloque in re.findall(r'<div class="recent-post clearfix">(.*?)</p>\s*</div>', sin_comentarios, re.S):
+        a = re.search(r'href="#actividad/(\d+)"[^>]*>(.*?)</a>', bloque, re.S)
+        cat = re.search(r'fa-tag"[^>]*></i>\s*([^<]+)', bloque)
+        f1 = re.search(r"El\s+(\d{4}-\d{2}-\d{2})\s+A las\s+(\d{1,2}:\d{2})", bloque)
+        f2 = re.search(r"Del\s+(\d{4}-\d{2}-\d{2})\s+al\s+(\d{4}-\d{2}-\d{2})", bloque)
+        if not (a and (f1 or f2)):
+            continue
+        titulo = html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", a.group(2)))).strip()
+        items.append({
+            "num": a.group(1),
+            "titulo": titulo,
+            "categoria": html.unescape(cat.group(1)).strip() if cat else "",
+            "fecha": f1.group(1) if f1 else f2.group(1),
+            "hora": f1.group(2).zfill(5) if f1 else None,
+            "fechaFin": f2.group(2) if f2 else None,
+        })
+    if len(items) < 3:
+        raise ValueError(f"solo reconozco {len(items)} actividades en la portada del IMUS; ¿ha cambiado la web?")
+    return items
+
+
+def parsear_ficha_imus(pagina):
+    """De la ficha de una actividad saca (lugar, ponentes, descripción)."""
+    lugar, autores, descripcion = None, [], ""
+    caja = re.search(r"Fecha y lugar\s*</h5>(.*?)</div>", pagina, re.S)
+    if caja:
+        for p in re.findall(r'<p class="card-text">(.*?)</p>', caja.group(1), re.S):
+            texto = html.unescape(re.sub(r"<[^>]+>", " ", p)).strip()
+            if texto and not re.match(r"(El|Del)\s+\d{4}-", texto):
+                lugar = lugar or re.sub(r"\s+", " ", texto)
+    aut = re.search(r"Autores</h5>(.*?)</li>", pagina, re.S)
+    if aut:
+        autores = [html.unescape(re.sub(r"<[^>]+>", "", x)).strip()
+                   for x in re.findall(r"<a[^>]*>(.*?)</a>", aut.group(1), re.S)]
+        autores = [a for a in autores if a]
+    desc = re.search(r"Descripción</h5>(.*?)</li>", pagina, re.S)
+    if desc:
+        descripcion = limpiar_html_parrafos(desc.group(1))
+    return lugar, autores, descripcion
+
+
+def eventos_imus(hoy):
+    pagina = descargar(URL_IMUS)
+    eventos, abiertas = [], 0
+    for it in parsear_portada_imus(pagina):
+        if (it["fechaFin"] or it["fecha"]) < hoy.isoformat():
+            continue
+        if it["categoria"] and IMUS_CAT_EXCLUIR.search(it["categoria"]):
+            continue
+        lugar, autores, descripcion = None, [], ""
+        if abiertas < MAX_FICHAS:
+            try:
+                ficha = descargar(URL_IMUS_FICHA, datos={"menu_id": 37, "register_id": it["num"],
+                                                         "sitio_id": 1, "lang_id": "ES", "sitio_id_prev": 1})
+                lugar, autores, descripcion = parsear_ficha_imus(ficha)
+                abiertas += 1
+                time.sleep(PAUSA)
+            except Exception:
+                pass
+        partes = [it["categoria"] + "." if it["categoria"] else ""]
+        if autores:
+            partes.append("Charla de " + " y ".join(autores) + ".")
+        partes.append(descripcion)
+        eventos.append({
+            "id": "imus-" + it["num"],
+            "titulo": it["titulo"],
+            "inicio": datetime.strptime(it["fecha"] + " " + (it["hora"] or "00:00"), "%Y-%m-%d %H:%M"),
+            "fin": datetime.strptime(it["fechaFin"], "%Y-%m-%d") if it["fechaFin"] else None,
+            "con_hora": bool(it["hora"]),
+            "lugar": lugar or "IMUS, Edificio Celestino Mutis (Campus Reina Mercedes)",
+            "descripcion": " ".join(p for p in partes if p),
+            "url": "https://imus.us.es/#actividad/" + it["num"],
+            "es_charla": True,
+            "usar_descripcion": True,
+        })
+    return eventos
+
+
+# ---------------------------------------------------------------------------
+# Matemática Aplicada I (US): página sencilla escrita a mano, casi siempre con
+# seminarios antiguos; solo interesan los bloques con fecha futura.
+# ---------------------------------------------------------------------------
+NOMBRE_MATAPLI = "Matemática Aplicada I (US)"
+URL_MATAPLI = "https://departamento.us.es/matapli1/seminarios.htm"
+
+
+def parsear_matapli(pagina, hoy):
+    if "Seminario de Matem" not in pagina:
+        raise ValueError("la página de seminarios de Matemática Aplicada I ha cambiado")
+    eventos = []
+    for bloque in re.split(r'<table width="75%"[^>]*>', pagina)[1:5]:
+        bloque = bloque.split("</table>")[0]
+        mf = re.search(r"(\d{1,2})/(\d{1,2})/(\d{4})", bloque)
+        if not mf:
+            continue
+        try:
+            fecha = date(int(mf.group(3)), int(mf.group(2)), int(mf.group(1)))
+        except ValueError:
+            continue
+        if fecha < hoy:
+            continue
+        negrita = re.search(r"<(b|strong)>(.*?)</\1>", bloque, re.S)
+        if not negrita:
+            continue
+        titulo = html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", negrita.group(2)))).strip()
+        titulo = re.sub(r"^\W*\d{1,2}/\d{1,2}/\d{4}\W*", "", titulo).strip(" -–")
+        if len(titulo) < 8:
+            continue
+        plano = html.unescape(re.sub(r"<[^>]+>", " ", bloque))
+        lugar = re.search(r"Lugar:\s*([^\n<]{3,120}?)(?:\s{2,}|$)", re.sub(r"\s+", " ", plano))
+        hora = buscar_hora(normalizar(plano))
+        if not hora:
+            mh = re.search(r"\[(\d{1,2})h(\d{2})?", plano)
+            hora = f"{int(mh.group(1)):02d}:{mh.group(2) or '00'}" if mh else None
+        eventos.append({
+            "id": f"mataplius-{fecha.isoformat()}-" + re.sub(r"\W+", "-", normalizar(titulo)).strip("-")[:36],
+            "titulo": titulo,
+            "inicio": datetime.combine(fecha, datetime.strptime(hora or "00:00", "%H:%M").time()),
+            "fin": None,
+            "con_hora": bool(hora),
+            "lugar": (lugar.group(1).strip() if lugar else None) or "Departamento de Matemática Aplicada I (US)",
+            "descripcion": re.sub(r"\s+", " ", plano)[:800],
+            "url": URL_MATAPLI,
+            "es_charla": True,
+            "usar_descripcion": True,
+        })
+    return eventos
+
+
+def eventos_matapli(hoy):
+    return parsear_matapli(descargar(URL_MATAPLI, "cp1252"), hoy)
+
+
+# ---------------------------------------------------------------------------
+# CABD (Centro Andaluz de Biología del Desarrollo, campus UPO)
+# Su agenda oficial es un calendario de Google (ICS) enlazado en cabd.es, que
+# mezcla los seminarios con reservas de sala: hay que quedarse solo con las charlas.
+# ---------------------------------------------------------------------------
+NOMBRE_CABD = "CABD (Biología del Desarrollo)"
+URL_CABD_AGENDA = "https://cabd.es/actualidad/agenda/"
+CABD_NO_CHARLA = re.compile(
+    r"ensayo|oposicion|reunion|comision|comite|claustro|prueba|minitalks?|posters?|"
+    r"actividad edi|pena flamenca|extens|visita guiada|\blab\b|labs\b|mantenimiento|obras|"
+    r"dr\.? invitado|alarm notification")
+
+
+def es_charla_cabd(resumen):
+    """¿Esta entrada del calendario del CABD es un seminario de verdad (y no una reserva de sala)?"""
+    n = normalizar(resumen)
+    if re.match(r"[\s?¿!]*sa\b", n) or n.startswith("?"):   # 'SA:' = reserva del salón de actos
+        return False
+    if CABD_NO_CHARLA.search(n):
+        return False
+    return bool(re.match(r"(christmas talk|dr\.?\s|prof\.?\s)", n)
+                or re.search(r"\b(seminars?|seminario|talks?|lectures?|charla|conferencia)\b", n))
+
+
+def titulo_cabd(resumen):
+    """'Dr. X. Instituto. "Título". Host: Y' -> ('Título', 'Dr. X. Instituto')."""
+    m = re.search(r"[\"“]([^\"“”]{8,})[\"”]", resumen)
+    if m:
+        titulo = m.group(1).strip().rstrip(".")
+        ponente = resumen[:m.start()].strip(" .,;:")
+        return titulo, (ponente or None)
+    base = re.split(r"\bHost\b", resumen)[0].strip(" .,;:")
+    return "Seminario CABD: " + base, None
+
+
+# Por si la página de la agenda falla un día: el calendario que enlazaba la última vez.
+URL_CABD_ICS_RESPALDO = ("https://calendar.google.com/calendar/ical/"
+                         "seminarios.cabd%40gmail.com/private-baff0cc3dae80e2653f736757deb21ec/basic.ics")
+
+
+def eventos_cabd(hoy):
+    try:
+        pagina = descargar(URL_CABD_AGENDA, agente=USER_AGENT_NAVEGADOR)
+        m = re.search(r'https?://[^\s"<>]+/calendar/ical/[^\s"<>]+basic\.ics', pagina)
+    except Exception:
+        m = None
+    url_ics = m.group(0) if m else URL_CABD_ICS_RESPALDO
+    url_ics = url_ics.replace("www.google.com/calendar", "calendar.google.com/calendar")
+    url_ics = url_ics.replace("http://", "https://")
+    eventos = []
+    for c in leer_ics(descargar(url_ics)):
+        if c.get("STATUS", "").upper().startswith("CANCEL"):
+            continue
+        resumen = html.unescape(_texto_ics(c.get("SUMMARY", "")))
+        inicio, con_hora = _fecha_ics(c.get("DTSTART", ""))
+        if not resumen or inicio is None or inicio.date() < hoy:
+            continue
+        if not es_charla_cabd(resumen):
+            continue
+        titulo, ponente = titulo_cabd(resumen)
+        descripcion = "Seminario del CABD. " + (f"Charla de {ponente}. " if ponente else "")
+        descripcion += limpiar_html_parrafos(_texto_ics(c.get("DESCRIPTION", "")))[:700]
+        lugar = html.unescape(_texto_ics(c.get("LOCATION", ""))).strip()
+        eventos.append({
+            "id": "cabd-" + hashlib.sha1(c.get("UID", resumen).encode()).hexdigest()[:10],
+            "titulo": titulo,
+            "inicio": inicio,
+            "fin": None,
+            "con_hora": bool(con_hora),
+            "lugar": lugar or "Salón de actos del CABD (campus UPO)",
+            "descripcion": descripcion,
+            "url": URL_CABD_AGENDA,
+            "es_charla": True,
+            "usar_descripcion": True,
+        })
+    return eventos
+
+
+
+# ---------------------------------------------------------------------------
+# cicCartuja (institutos de Química, Materiales y Fotosíntesis, Isla de la Cartuja)
+# Publica noticias en un RSS de WordPress; solo interesan las que anuncian una
+# charla con fecha futura (las visitas tipo Meldal salen aquí antes que en prensa).
+# ---------------------------------------------------------------------------
+NOMBRE_CIC = "cicCartuja"
+URL_CIC_FEED = "https://www.ciccartuja.es/feed/"
+
+
+def parsear_feed_ciccartuja(xml):
+    if "<rss" not in xml:
+        raise ValueError("el RSS del cicCartuja no parece un RSS")
+    items = []
+    for crudo in re.findall(r"<item>(.*?)</item>", xml, re.S):
+        def campo(nombre):
+            m = re.search(rf"<{nombre}>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</{nombre}>", crudo, re.S)
+            return html.unescape(m.group(1)).strip() if m else ""
+        contenido = re.search(r"<content:encoded><!\[CDATA\[(.*?)\]\]></content:encoded>", crudo, re.S)
+        try:
+            publicado = parsedate_to_datetime(campo("pubDate")).date()
+        except Exception:
+            continue
+        items.append({
+            "titulo": re.sub(r"\s+", " ", campo("title")),
+            "url": campo("link"),
+            "publicado": publicado,
+            "texto": limpiar_html_parrafos(contenido.group(1)) if contenido else "",
+        })
+    if not items:
+        raise ValueError("el RSS del cicCartuja viene vacío")
+    return items
+
+
+def eventos_ciccartuja(hoy):
+    eventos = []
+    for it in parsear_feed_ciccartuja(descargar(URL_CIC_FEED)):
+        fecha, hora, lugar = extraer_fecha_hora_lugar(it["texto"][:1600], it["publicado"])
+        if not fecha or fecha < hoy:          # noticias sin una fecha futura: no son anuncios
+            continue
+        inicio = datetime(fecha.year, fecha.month, fecha.day)
+        if hora:
+            inicio = _con_hora(inicio, hora)
+        eventos.append({
+            "id": "cic-" + _slug(it["url"]),
+            "titulo": it["titulo"],
+            "inicio": inicio, "fin": None, "con_hora": bool(hora),
+            "lugar": lugar or "cicCartuja (Isla de la Cartuja)",
+            "url": it["url"],
+            "descripcion": it["texto"][:1200],
+            "usar_descripcion": True,
+        })
+    return eventos
+
+
+# ---------------------------------------------------------------------------
+# Museo Casa de la Ciencia (CSIC, Pabellón de Perú)
+# Del listado de actividades solo se abren conferencias, charlas y citas; los
+# talleres, el planetario y las exposiciones se quedan fuera desde la URL.
+# ---------------------------------------------------------------------------
+NOMBRE_CASA = "Casa de la Ciencia (CSIC)"
+URL_CASA = "https://www.casadelaciencia.csic.es"
+CASA_TIPOS_CHARLA = ("conferencia", "charla")
+CASA_TIPOS_ABRIR = CASA_TIPOS_CHARLA + ("citaacontecimiento", "presentacion", "mesa-redonda")
+
+
+def parsear_listado_casa(pagina):
+    filas = re.findall(r'<div class="views-row[^"]*">(.*?)(?=<div class="views-row|$)', pagina, re.S)
+    if not filas:
+        raise ValueError("no encuentro el listado de actividades de la Casa de la Ciencia")
+    resultado = []
+    for fila in filas:
+        a = re.search(r'views-field-title.*?<a href="(/es/([a-z-]+)/[^"]+)">(.*?)</a>', fila, re.S)
+        if a and a.group(2) in CASA_TIPOS_ABRIR:
+            resultado.append((a.group(1), a.group(2), re.sub(r"\s+", " ", html.unescape(a.group(3))).strip()))
+    return resultado
+
+
+def parsear_ficha_casa(pagina):
+    """Devuelve (fechas futuras ISO ordenadas, texto de la ficha)."""
+    fechas = sorted(set(m[:10] for m in re.findall(r'class="date-display-single"[^>]*content="(\d{4}-\d{2}-\d{2})', pagina)))
+    cuerpo = re.search(r'<div class="field-name-body[^"]*".*?>(.*?)</div>\s*</div>', pagina, re.S)
+    texto = limpiar_html_parrafos(cuerpo.group(1)) if cuerpo else limpiar_html_parrafos(pagina)
+    return fechas, texto[:1600]
+
+
+def eventos_casa(hoy):
+    pagina = descargar(URL_CASA + "/es/actividades", agente=USER_AGENT_NAVEGADOR)
+    eventos, abiertas = [], 0
+    for href, tipo, titulo in parsear_listado_casa(pagina):
+        if abiertas >= 10:
+            break
+        try:
+            fechas, texto = parsear_ficha_casa(descargar(urljoin(URL_CASA, href), agente=USER_AGENT_NAVEGADOR))
+        except Exception:
+            continue
+        abiertas += 1
+        _pausa()
+        futuras = [f for f in fechas if f >= hoy.isoformat()]
+        if not futuras:
+            continue
+        hora = buscar_hora(normalizar(texto))
+        inicio = datetime.strptime(futuras[0], "%Y-%m-%d")
+        if hora:
+            inicio = _con_hora(inicio, hora)
+        eventos.append({
+            "id": "casa-" + _slug(href),
+            "titulo": titulo,
+            "inicio": inicio,
+            "fin": datetime.strptime(futuras[-1], "%Y-%m-%d") if futuras[-1] > futuras[0] else None,
+            "con_hora": bool(hora),
+            "lugar": "Museo Casa de la Ciencia (Pabellón de Perú)",
+            "url": urljoin(URL_CASA, href),
+            "descripcion": texto,
+            "usar_descripcion": True,
+            "es_charla": True if tipo in CASA_TIPOS_CHARLA else None,
+        })
+    return eventos
+
+
 LECTORES_WEB = [
+    (NOMBRE_IMUS, eventos_imus),
+    (NOMBRE_MATAPLI, eventos_matapli),
+    (NOMBRE_CABD, eventos_cabd),
     (NOMBRE_DIVULGAUS, eventos_divulgaus),
     (NOMBRE_IBIS, eventos_ibis),
     (NOMBRE_FISICA, eventos_fisica),
+    (NOMBRE_CIC, eventos_ciccartuja),
+    (NOMBRE_CASA, eventos_casa),
     (NOMBRE_CAJASOL, eventos_cajasol),
 ]
 
@@ -1413,11 +2015,12 @@ def _anadir_sin_duplicar(lista, ev):
     """Añade el evento a la lista salvo que ya esté (mismo id o misma charla en otra web).
     Devuelve 1 si lo añade y 0 si lo funde con uno existente."""
     for viejo in lista:
-        if viejo["id"] == ev["id"] or (viejo["tipo"] == ev["tipo"] == "charla" and _mismo_evento(viejo, ev)):
+        if viejo["id"] == ev["id"] or (viejo["tipo"] in ("charla", "premio") and ev["tipo"] in ("charla", "premio")
+                                              and _mismo_evento(viejo, ev)):
             if viejo["id"] != ev["id"]:
                 viejo.setdefault("otrosIds", []).append(ev["id"])
             if ev.get("destacado") and not viejo.get("destacado"):
-                viejo["destacado"], viejo["laureado"] = True, ev.get("laureado")
+                viejo["destacado"], viejo["laureado"], viejo["tipo"] = True, ev.get("laureado"), "premio"
             if ev.get("laureadoTema") and not viejo.get("laureadoTema"):
                 viejo["laureadoTema"] = ev["laureadoTema"]
             viejo["mencionaNobel"] = bool(viejo.get("mencionaNobel") or ev.get("mencionaNobel"))
@@ -1455,6 +2058,12 @@ def recolectar(mostrar_descartados=False, forzar_laureados=False):
     except Exception as e:
         print(f"[AVISO] No se pudo actualizar la lista de Nobel ({str(e)[:80]}); uso la que ya tengo")
         _aviso_certificados(e)
+    try:
+        premios = actualizar_laureados_premios(forzar_laureados)
+        print(f"[OK] Otros premios (Lasker, Kavli, Breakthrough, Wolf...): {len(premios['laureados'])} laureados vivos "
+              f"(del {premios['actualizado'][:10]})")
+    except Exception as e:
+        print(f"[AVISO] No se pudo leer la lista de otros premios ({str(e)[:80]}); sigo sin ella")
     laureados = cargar_laureados()
     aceptados, fallidas, fuentes_ok = [], [], 0
 
@@ -1511,7 +2120,8 @@ def recolectar(mostrar_descartados=False, forzar_laureados=False):
         _anadir_sin_duplicar(aceptados, t)
     print(f"     {len(torneos)} torneos guardados")
     for t in sorted(torneos, key=lambda e: e["fecha"]):
-        print(f"       {t['fecha']}  {t['titulo'][:58]:58}  federación: {t['federacion']}")
+        print(f"       {t['fecha']}  {t['titulo'][:50]:50}  federación: {t['federacion']:13}  ritmo: "
+              f"{NOMBRES_RITMO[t['ritmo']]}" + (f" ({t['ritmoNota']})" if t['ritmoNota'] else ""))
 
     # 4) Prensa: pistas de visitas de laureados
     try:
@@ -1547,7 +2157,7 @@ def recolectar(mostrar_descartados=False, forzar_laureados=False):
     }
     with open(SALIDA, "w", encoding="utf-8") as f:
         json.dump(contenido, f, ensure_ascii=False, indent=1)
-    charlas = [e for e in aceptados if e["tipo"] == "charla"]
+    charlas = [e for e in aceptados if e["tipo"] in ("charla", "premio")]
     destacadas = [e for e in charlas if e["destacado"]]
     suaves = [e for e in charlas if not e["destacado"] and (e.get("laureadoTema") or e.get("mencionaNobel"))]
     for e in destacadas:
@@ -1587,7 +2197,7 @@ def prueba():
     r, _ = caso("Charla: las mates del Nobel de Física 2024 explicadas")
     comprobar("menciona Nobel pero sin laureado -> no destacado, sí marca suave",
               bool(r and not r["destacado"] and r["mencionaNobel"]))
-    r, _ = caso("Charla de John Clarke sobre cocina")
+    r, _ = caso("Charla de John Clarke sobre circuitos cuánticos")
     comprobar("nombre común sin contexto de premio -> no destacado", bool(r and not r["destacado"]))
     r, _ = caso("Charla de John Clarke, Premio Nobel de Física")
     comprobar("nombre común con contexto de premio -> destacado", bool(r and r["destacado"]))
@@ -1607,10 +2217,12 @@ def prueba():
     comprobar("charla en Jerez -> descartada por lugar", r is None and m == "fuera de Sevilla")
     r, m = caso("Conferencia antigua", inicio=datetime(2026, 1, 1, 12, 0))
     comprobar("evento pasado -> descartado", r is None and m == "ya pasado")
-    r, _ = caso("Charla coloquio del proyecto InmigrARTE")
-    comprobar("charla normal -> guardada", r is not None and not r["destacado"])
+    r, _ = caso("Charla coloquio: la evolución de las especies urbanas")
+    comprobar("charla normal (con tema) -> guardada", r is not None and not r["destacado"])
+    r, m = caso("Charla coloquio del proyecto InmigrARTE")
+    comprobar("charla sin tema de ciencias -> descartada", r is None and m == "tema que no interesa")
     r, _ = caso("Actividad de las Semanas de la Ciencia", usar_descripcion=True,
-                descripcion="La investigadora Paula Villalba ofrece la charla 'El río', el jueves a las 11.00 horas")
+                descripcion="La investigadora Paula Villalba ofrece la charla 'El río y su ecosistema', el jueves a las 11.00 horas")
     comprobar("charla anunciada solo en la descripción -> guardada", r is not None)
     r, _ = caso("Actividad de las Semanas de la Ciencia", descripcion="ofrece la charla 'El río'")
     comprobar("sin 'usar_descripcion' el título manda -> descartada", r is None)
@@ -1797,6 +2409,161 @@ def prueba():
               lista_e[0]["destacado"] and lista_e[0]["hora"] == "12:00" and lista_e[0]["otrosIds"] == ["div-9"]
               and lista_e[0]["fuente"] == "A + B")
 
+    print("Temas: solo mates, física, biología, química y filosofía")
+    r, m = caso("Conferencia: la Sevilla barroca y su patrimonio")
+    comprobar("charla de historia del arte -> descartada por tema", r is None and m == "tema que no interesa")
+    r, _ = caso("Conferencia: agujeros negros y ondas gravitacionales")
+    comprobar("agujeros negros -> física", bool(r and r["tema"] == "física"))
+    r, _ = caso("Charla divulgativa: vivir tras un ictus, testimonios y apoyo")
+    comprobar("charla sanitaria del ictus -> descartada", r is None)
+    r, _ = caso("Seminario: Signalling pathways in tissue regeneration", fuente="IBiS (Instituto de Biomedicina de Sevilla)")
+    comprobar("IBiS sin palabras clave -> biología por la fuente", bool(r and r["tema"] == "biología"))
+    r, _ = caso("Conferencia: Nietzsche y la modernidad")
+    comprobar("Nietzsche -> filosofía", bool(r and r["tema"] == "filosofía"))
+    r, _ = caso("Conferencia de Esther Duflo sobre pobreza y desarrollo económico")
+    comprobar("laureada ponente de otro tema -> se guarda igual (premio)", bool(r and r["tipo"] == "premio"))
+    r, _ = caso("Charla sobre el legado del premio Nobel de Economía en políticas públicas")
+    comprobar("menciona un premio sin tema de ciencias -> se guarda con marca suave", bool(r and r["mencionaNobel"]))
+
+    print("Lector del IMUS")
+    PORTADA_IMUS = (
+        '<h5>Próximas actividades</h5>'
+        '<div class="recent-post clearfix"><div class="recent-post-info">'
+        '<span class="dropcap square large">SMdM </span> '
+        '<a onClick="templateAction(37, 3530)" href="#actividad/3530">On The Failure<!-- <a href="#actividad/3530 title="x">Leer m\u00e1s</a> --></a>'
+        '<span><span class="weekwarning"></span> <i class="fa fa-calendar-o"></i>Del 2026-11-13 al 2026-11-16 </span>'
+        '<p><i class="fa fas fa-tag"></i> Seminario UE-MdM-IMUS</p></div></div>'
+        '<div class="recent-post clearfix"><div class="recent-post-info">'
+        '<span class="dropcap square large">CCIA </span> '
+        '<a onClick="templateAction(37, 3540)" href="#actividad/3540">Homolog\u00eda de textos</a>'
+        '<span><span class="weekwarning"></span> <i class="fa fa-calendar-o"></i>El 2026-11-16 A las 9:00</span>'
+        '<p><i class="fa fas fa-tag"></i> Seminario de Computaci\u00f3n</p></div></div>'
+        '<div class="recent-post clearfix"><div class="recent-post-info">'
+        '<span class="dropcap square large">TESIS </span> '
+        '<a onClick="templateAction(37, 3532)" href="#actividad/3532">Tesis defendida por EST</a>'
+        '<span><span class="weekwarning"></span> <i class="fa fa-calendar-o"></i>El 2026-11-18 A las 11:00</span>'
+        '<p><i class="fa fas fa-tag"></i> Tesis</p></div></div>'
+    )
+    its = parsear_portada_imus(PORTADA_IMUS)
+    comprobar("portada: lee los 3 bloques", len(its) == 3)
+    comprobar("portada: actividad de un día con su hora ('9:00' -> '09:00')",
+              its[1]["num"] == "3540" and its[1]["fecha"] == "2026-11-16" and its[1]["hora"] == "09:00")
+    comprobar("portada: actividad de varios días sin hora",
+              its[0]["fechaFin"] == "2026-11-16" and its[0]["hora"] is None and its[0]["titulo"] == "On The Failure")
+    comprobar("las categorías Tesis / Doc-Course / Workshops se excluyen",
+              bool(IMUS_CAT_EXCLUIR.search("Tesis")) and bool(IMUS_CAT_EXCLUIR.search("Doc-Course IMUS"))
+              and bool(IMUS_CAT_EXCLUIR.search("Workshops y Congresos")) and not IMUS_CAT_EXCLUIR.search("Seminario de Otoño IMUS"))
+    FICHA_IMUS = ('<h5 class="card-title">Fecha y lugar </h5>'
+                  '<p class="card-text">El 2026-11-16 A las 09:00 </p>'
+                  '<p class="card-text">Seminario I (IMUS), Edificio Celestino Mutis</p><p class="card-text"></p></div>'
+                  '<li class="list-group-item"><h5 class="card-title">Autores</h5><br />'
+                  '<a onClick="x" href="#visita/1">Filippo Bracci</a></li>'
+                  '<li class="list-group-item"><h5 class="card-title">Descripción</h5><br /><p>Resumen de la charla.</p></li>')
+    lugar, autores, desc = parsear_ficha_imus(FICHA_IMUS)
+    comprobar("ficha: lugar, ponente y descripción",
+              lugar == "Seminario I (IMUS), Edificio Celestino Mutis" and autores == ["Filippo Bracci"]
+              and "Resumen de la charla" in desc)
+
+    print("Lector del CABD")
+    ICS_VALARM = ("BEGIN:VCALENDAR\nBEGIN:VEVENT\nDTSTART:20261204T110000Z\n"
+                  "SUMMARY:Dr. Eugene V. Koonin. \"Brave new world of prokaryotic immunity\". Host: X\n"
+                  "BEGIN:VALARM\nACTION:EMAIL\nDESCRIPTION:This is an event reminder\n"
+                  "SUMMARY:Alarm notification\nEND:VALARM\nEND:VEVENT\nEND:VCALENDAR")
+    c = leer_ics(ICS_VALARM)[0]
+    comprobar("los avisos VALARM no pisan el título del evento", c["SUMMARY"].startswith("Dr. Eugene"))
+    comprobar("reserva de sala 'SA:' no es charla", not es_charla_cabd("SA: LabLolAcaSal"))
+    comprobar("'Ensayo Tesis' no es charla", not es_charla_cabd("SA: Ensayo Tesis IreneMolina") and not es_charla_cabd("Ensayo Tesis"))
+    comprobar("'?SA + pry: LabMORE' no es charla", not es_charla_cabd("?SA + pry: LabMORE"))
+    comprobar("'Dr. Invitado  MORE' (hueco sin confirmar) no es charla", not es_charla_cabd("Dr. Invitado  MORE"))
+    comprobar("un 'Dr. ...' con charla entre comillas sí lo es", es_charla_cabd('Dr. Eugene V. Koonin. "Brave new world". Host: X'))
+    comprobar("la Christmas Talk sí lo es", es_charla_cabd("Christmas Talk: Dr Nick Lane. University College London. Host: P"))
+    titulo, ponente = titulo_cabd('Dr. Eugene V. Koonin. "Brave new world of prokaryotic immunity". Host: X')
+    comprobar("título entre comillas -> título limpio y ponente",
+              titulo == "Brave new world of prokaryotic immunity" and ponente == "Dr. Eugene V. Koonin")
+    titulo, ponente = titulo_cabd("Dr. Jonathan Enriquez.  Institut de Génomique Fonctionnelle de Lyon. Host: Y")
+    comprobar("sin comillas -> 'Seminario CABD: ...' sin el Host",
+              titulo.startswith("Seminario CABD: Dr. Jonathan Enriquez") and "Host" not in titulo and ponente is None)
+
+    print("Lector de Matemática Aplicada I")
+    PAG_MATAPLI = ('<p id="cuerpo">Seminario de Matemática Aplicada I</p>'
+                   '<table width="75%" border="1"><tr><td><p><a href="doc/x.pdf"><b>02/07/2026 Charla sobre '
+                   'homología persistente</b></a></p></td></tr><tr><td><p><b>Lugar: Salón de Grados</b></p>'
+                   '<p>1.[8h30 - 8h45] <b>Ponente: Título</b></p></td></tr></table>')
+    evs_m = parsear_matapli(PAG_MATAPLI, date(2026, 6, 1))
+    comprobar("bloque con fecha futura -> un evento con título, lugar y hora",
+              len(evs_m) == 1 and evs_m[0]["titulo"] == "Charla sobre homología persistente"
+              and evs_m[0]["lugar"].startswith("Salón de Grados") and evs_m[0]["inicio"].hour == 8)
+    comprobar("el mismo bloque con fecha ya pasada -> nada", parsear_matapli(PAG_MATAPLI, date(2026, 8, 1)) == [])
+
+    print("Lectores del cicCartuja y la Casa de la Ciencia")
+    FEED_CIC = ("<rss><channel><item><title>Visita de un premio Nobel</title>"
+                "<link>https://www.ciccartuja.es/blog/2026/11/01/visita/</link>"
+                "<pubDate>Sun, 01 Nov 2026 10:00:00 +0000</pubDate>"
+                "<content:encoded><![CDATA[<p>El 20 de noviembre a las 12:00 horas impartirá una "
+                "conferencia en el sal\u00f3n de actos.</p>]]></content:encoded></item></channel></rss>")
+    its = parsear_feed_ciccartuja(FEED_CIC)
+    comprobar("cicCartuja: lee título, enlace, fecha de publicación y texto",
+              len(its) == 1 and its[0]["titulo"] == "Visita de un premio Nobel"
+              and its[0]["publicado"] == date(2026, 11, 1) and "impartirá una conferencia" in its[0]["texto"])
+    LISTADO_CASA = ('<div class="views-row x">'
+                    '<div class="views-field views-field-title"><span class="field-content">'
+                    '<a href="/es/conferencia/universo">El Universo desde Sevilla</a></span></div></div>'
+                    '<div class="views-row y"><div class="views-field views-field-title"><span class="field-content">'
+                    '<a href="/es/planetario/cielo">El cielo en directo</a></span></div></div>'
+                    '<div class="views-row z"><div class="views-field views-field-title"><span class="field-content">'
+                    '<a href="/es/taller/mates">Matemáticas</a></span></div></div>')
+    filas = parsear_listado_casa(LISTADO_CASA)
+    comprobar("Casa: se queda con la conferencia y descarta planetario y taller",
+              filas == [("/es/conferencia/universo", "conferencia", "El Universo desde Sevilla")])
+    FICHA_CASA = ('<span class="date-display-single" property="dc:date" content="2026-11-17T00:00:00+01:00">17 Nov 26</span>'
+                  '<span class="date-display-single" property="dc:date" content="2026-11-19T00:00:00+01:00">19 Nov 26</span>'
+                  '<div class="field-name-body x"><div><p>Ciclo de charlas. A las 19:00 horas.</p></div></div>')
+    fechas, texto = parsear_ficha_casa(FICHA_CASA)
+    comprobar("Casa: fechas ISO de la ficha y su texto",
+              fechas == ["2026-11-17", "2026-11-19"] and "Ciclo de charlas" in texto)
+
+    print("Torneos: solo ritmo clásico")
+    comprobar("90 min + 30 seg -> clásico", clasificar_ritmo("Suizo · 90 min + 30 seg · 7 rondas", "Abierto", "")[0] == "clasico")
+    comprobar("60 min + 30 seg -> clásico", clasificar_ritmo("Suizo · 60 min + 30 seg", "Abierto", "")[0] == "clasico")
+    comprobar("15 min + 10 seg -> rápido", clasificar_ritmo("Suizo · 15 min + 10 seg", "Abierto", "")[0] == "rapido")
+    comprobar("8 min + 3 seg -> rápido", clasificar_ritmo("Suizo · 8 min + 3 seg", "Abierto", "")[0] == "rapido")
+    comprobar("5 min -> blitz", clasificar_ritmo("Suizo · 5 min · 8 rondas", "Torneo", "")[0] == "blitz")
+    comprobar("el título manda: 'Partidas Rápidas' -> rápido", clasificar_ritmo(None, "Torneo de Partidas Rápidas", "")[0] == "rapido")
+    comprobar("el título manda: 'Blitz' -> blitz", clasificar_ritmo("Suizo · 90 min", "Gran Blitz de Navidad", "")[0] == "blitz")
+    comprobar("incremento absurdo (300 seg) se ignora: 10 min + 300 seg -> blitz",
+              clasificar_ritmo("Suizo · 10 min + 300 seg", "Abierto", "")[0] == "blitz")
+    comprobar("sin formato, lo lee de las bases: 'Ritmo de juego: 90 minutos + 30 segundos'",
+              clasificar_ritmo(None, "Abierto", "Ritmo de juego: 90 minutos + 30 segundos por jugada")[0] == "clasico")
+    comprobar("bases con 90'+30'' -> clásico", clasificar_ritmo(None, "Abierto", "Ritmo de juego: 90' + 30'' por jugada")[0] == "clasico")
+    comprobar("bases con '2 horas' -> clásico", clasificar_ritmo(None, "Abierto", "Tiempo de reflexión: 2 horas por jugador")[0] == "clasico")
+    comprobar("sin ningún dato -> sin confirmar", clasificar_ritmo(None, "Abierto", "Inscripción 10 euros")[0] == "desconocido")
+
+    print("Premios como categoría aparte")
+    r, _ = caso("Conferencia de Takaaki Kajita sobre neutrinos")
+    comprobar("laureado ponente -> tipo 'premio'", bool(r and r["tipo"] == "premio"))
+    r, _ = caso("Ciclo de conferencias sobre el universo")
+    comprobar("charla normal -> tipo 'charla'", bool(r and r["tipo"] == "charla"))
+    filas = [
+        {"personaLabel": {"value": "Lewis C. Cantley"}, "premio": {"value": "http://www.wikidata.org/entity/Q540561"}, "anio": {"value": "2016"}},
+        {"personaLabel": {"value": "Lewis C. Cantley"}, "premio": {"value": "http://www.wikidata.org/entity/Q5019489"}, "anio": {"value": "2013"}},
+        {"personaLabel": {"value": "R. Aaij"}, "premio": {"value": "http://www.wikidata.org/entity/Q1314470"}, "anio": {"value": "2025"}},
+        {"personaLabel": {"value": "Q123456"}, "premio": {"value": "http://www.wikidata.org/entity/Q583069"}},
+        {"personaLabel": {"value": "John Smith"}, "premio": {"value": "http://www.wikidata.org/entity/Q583069"}, "anio": {"value": "2001"}},
+        {"personaLabel": {"value": "Otro Premio"}, "premio": {"value": "http://www.wikidata.org/entity/Q6085042"}, "anio": {"value": "2001"}},
+    ]
+    lw = laureados_desde_filas(filas)
+    nombres = {d["nombre"]: d for d in lw}
+    comprobar("Wikidata: quita iniciales intermedias y se queda con el premio más reciente",
+              nombres.get("Lewis Cantley", {}).get("premio") == "Premio Wolf de Medicina 2016")
+    comprobar("Wikidata: descarta nombres con solo inicial, etiquetas sin traducir y premios no elegidos",
+              set(nombres) == {"Lewis Cantley", "John Smith"})
+    comprobar("Wikidata: un nombre muy corriente se marca como ambiguo", nombres["John Smith"]["ambiguo"])
+    pl = _patrones_laureados(lw)
+    ponente, _t = analizar_laureado("Charla de Lewis Cantley sobre el cáncer", "", pl)
+    comprobar("un ganador de otro premio (Wolf) también cuenta como ponente", bool(ponente and "Wolf" in ponente))
+    ponente, _t = analizar_laureado("Conferencia de John Smith sobre algo", "", pl)
+    comprobar("'John Smith' sin contexto de premio no cuenta", ponente is None)
+
     print("\nTodo correcto." if fallos == 0 else f"\n{fallos} comprobaciones fallan.")
     return 1 if fallos else 0
 
@@ -1805,7 +2572,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(description="Recolector de charlas y torneos de Sevilla")
     ap.add_argument("--descartados", action="store_true", help="lista los eventos descartados")
     ap.add_argument("--prueba", action="store_true", help="ejecuta comprobaciones internas")
-    ap.add_argument("--laureados", action="store_true", help="fuerza la actualización de la lista de Nobel")
+    ap.add_argument("--laureados", action="store_true", help="fuerza la actualización de las listas de laureados (Nobel y otros premios)")
     args = ap.parse_args()
     try:   # que un carácter raro (emoji, comillas) nunca haga fallar un print en la consola de Windows
         sys.stdout.reconfigure(errors="replace")
