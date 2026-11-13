@@ -19,6 +19,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add eventos.json laureados_nobel.json
+             git add eventos.json laureados_nobel.json laureados_premios.json
           git diff --cached --quiet || git commit -m "Actualizar eventos"
           git push
