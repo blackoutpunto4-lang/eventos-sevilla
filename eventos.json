@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T06:09:06Z",
+ "generado": "2026-11-16T06:50:50Z",
  "total": 23,
  "eventos": [
   {
@@ -238,8 +238,8 @@
    ]
   },
   {
-   "id": "cabd-3fcf62f45f",
-   "titulo": "Seminario CABD: Christmas Talk: Dr Nick Lane. University College London",
+   "id": "cabd-72e81d9dff",
+   "titulo": "Seminario CABD: Christmas Activities. Christmas Talk: Dr Nick Lane",
    "fecha": "2026-12-17",
    "hora": "12:00",
    "lugar": "Salón de actos del CABD (campus UPO)",
@@ -252,7 +252,7 @@
    "url": "https://cabd.es/actualidad/agenda/",
    "fuente": "CABD (Biología del Desarrollo)",
    "otrosIds": [
-    "cabd-72e81d9dff"
+    "cabd-3fcf62f45f"
    ]
   },
   {
@@ -366,17 +366,17 @@
  ],
  "pistas": [
   {
-   "titulo": "El alcalde de Sevilla recibe al Nobel de Química Morten Meldal en el Ayuntamiento",
-   "fuente": "ABC",
-   "fecha": "2026-10-16",
-   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOTWJlS2ZRN1NGZ0k1Tmo0Ym1xNHJ1NF9sVG9UUkl6c1JZQnJDTE9PZl9iN2VBZmNCSnVnamZEMkJfeVFmbHFQekJDY2t0TTFWUU10Q3lxTFBUSUtDa0ZvN3l3SmZ0NTFObTZNTHpWUnpwMkdiTmdsUm0tR1lVZ25BUEp0cVpCX0hvVThZaFVBQUt6aDhsYnNDb2tWQ29KSng0ckNYb3dxLUdPbm5z0gGyAUFVX3lxTE1ySWYwRVBCbDNieG9rTmRvZ1VTUTFReEJXektlZzlNOVF6TTBJMHdRSjBGOVN4WEhvaHg0Q0ZHOE4xOENBa1BheE9IQ0VOVUtpWkhyWGhUN1E5MXFDYldraHFwWFdtNlNiV3d6R1o4LUN1REtsdGM4eUVSU1VWWk9vZXQxb09pbGlaaVRzMkxhWm5ENEZqM3BuRWF6b1pmUDJQTkg1WXpXYzFCeVRXSHViaXc?oc=5",
-   "laureado": "Morten Meldal (Nobel de Química 2022)"
-  },
-  {
    "titulo": "Morten Peter Meldal, Premio Nobel de Química 2022, ofrece una conferencia en la US",
    "fuente": "Universidad de Sevilla",
    "fecha": "2026-10-16",
    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcEZxN3NiaFNGVVg3UEFyaEZ1aWswRFF4ZzFDVG9RYy1UZlp2NzR3YVFheEc3NDE3RXEzRmFnc3RiN0hCRF9zUlExYW50T3lTeEVJcFBLTW56WjVwWXl1TnRib3haWlplcDBZLUd1SVdweGV2Q3VITmhIX0E5T09sZzEtZGE5UnlpOV9TRGpJRmZaTWZfUEpZbFJLWko2cUxmaXVmQm5YTFl5enBmQUs1aEZB?oc=5",
+   "laureado": "Morten Meldal (Nobel de Química 2022)"
+  },
+  {
+   "titulo": "El alcalde de Sevilla recibe al Nobel de Química Morten Meldal en el Ayuntamiento",
+   "fuente": "ABC",
+   "fecha": "2026-10-16",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOTWJlS2ZRN1NGZ0k1Tmo0Ym1xNHJ1NF9sVG9UUkl6c1JZQnJDTE9PZl9iN2VBZmNCSnVnamZEMkJfeVFmbHFQekJDY2t0TTFWUU10Q3lxTFBUSUtDa0ZvN3l3SmZ0NTFObTZNTHpWUnpwMkdiTmdsUm0tR1lVZ25BUEp0cVpCX0hvVThZaFVBQUt6aDhsYnNDb2tWQ29KSng0ckNYb3dxLUdPbm5z0gGyAUFVX3lxTE1ySWYwRVBCbDNieG9rTmRvZ1VTUTFReEJXektlZzlNOVF6TTBJMHdRSjBGOVN4WEhvaHg0Q0ZHOE4xOENBa1BheE9IQ0VOVUtpWkhyWGhUN1E5MXFDYldraHFwWFdtNlNiV3d6R1o4LUN1REtsdGM4eUVSU1VWWk9vZXQxb09pbGlaaVRzMkxhWm5ENEZqM3BuRWF6b1pmUDJQTkg1WXpXYzFCeVRXSHViaXc?oc=5",
    "laureado": "Morten Meldal (Nobel de Química 2022)"
   },
   {
