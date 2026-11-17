@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-16T06:50:50Z",
+ "generado": "2026-11-17T06:19:58Z",
  "total": 23,
  "eventos": [
   {
@@ -21,52 +21,6 @@
    "fechaFin": "2026-11-29"
   },
   {
-   "id": "imus-3530",
-   "titulo": "On The Failure of the Denjoy–Wolff Theorem",
-   "fecha": "2026-11-13",
-   "hora": null,
-   "lugar": "Seminario I (IMUS), Edificio Celestino Mutis",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "matemáticas",
-   "url": "https://imus.us.es/#actividad/3530",
-   "fuente": "IMUS (Instituto de Matemáticas)",
-   "fechaFin": "2026-11-16"
-  },
-  {
-   "id": "imus-3540",
-   "titulo": "Homología de textos",
-   "fecha": "2026-11-16",
-   "hora": "12:00",
-   "lugar": "Seminario E1.80 , E. T. S. Ingeniería Informática",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "matemáticas",
-   "url": "https://imus.us.es/#actividad/3540",
-   "fuente": "IMUS (Instituto de Matemáticas)"
-  },
-  {
-   "id": "divulgaus-ciclo-de-charlas-divulgativas-sobre-el-ictus-para-el-alumnado-universitario-0",
-   "titulo": "Ciclo de charlas divulgativas sobre el ictus para el alumnado universitario",
-   "fecha": "2026-11-16",
-   "hora": "12:30",
-   "lugar": "Facultad de Ciencias de la Educación",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "biología",
-   "url": "https://www.investigacion.us.es/eventos/ciclo-de-charlas-divulgativas-sobre-el-ictus-para-el-alumnado-universitario-0",
-   "fuente": "DivulgaUS (Universidad de Sevilla)"
-  },
-  {
    "id": "ibis-proyecto-elara-recurrencia-y-adaptacion-genomica-en-la-endocarditis-por-enterococcus-faecalis",
    "titulo": "Proyecto ELARA: recurrencia y adaptación genómica en la endocarditis por Enterococcus faecalis",
    "fecha": "2026-11-17",
@@ -79,6 +33,36 @@
    "mencionaNobel": false,
    "tema": "biología",
    "url": "https://www.ibis-sevilla.es/es/eventos/2026/11/proyecto-elara-recurrencia-y-adaptacion-genomica-en-la-endocarditis-por-enterococcus-faecalis/",
+   "fuente": "IBiS (Instituto de Biomedicina de Sevilla)"
+  },
+  {
+   "id": "ibis-mitochondrial-dysfunction-from-therapeutic-rescue-to-cellular-mechanisms",
+   "titulo": "Mitochondrial Dysfunction from Therapeutic Rescue to Cellular Mechanisms",
+   "fecha": "2026-11-17",
+   "hora": "15:00",
+   "lugar": "SALÓN DE ACTOS IBiS",
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "biología",
+   "url": "https://www.ibis-sevilla.es/es/eventos/2026/11/mitochondrial-dysfunction-from-therapeutic-rescue-to-cellular-mechanisms/",
+   "fuente": "IBiS (Instituto de Biomedicina de Sevilla)"
+  },
+  {
+   "id": "ibis-from-phenotype-to-molecular-docking-experimental-insights-into-a-lupin-hydrolysate-against-aaf926",
+   "titulo": "From phenotype to molecular docking: experimental insights into a lupin hydrolysate against MASLD and in silico discovery of peptides targeting oxidative stress",
+   "fecha": "2026-11-18",
+   "hora": "08:15",
+   "lugar": "SALÓN DE ACTOS IBiS",
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "biología",
+   "url": "https://www.ibis-sevilla.es/es/eventos/2026/11/from-phenotype-to-molecular-docking-experimental-insights-into-a-lupin-hydrolysate-against-masld-and-in-silico-discovery-of-peptides-targeting-oxidative-stress/",
    "fuente": "IBiS (Instituto de Biomedicina de Sevilla)"
   },
   {
@@ -172,6 +156,21 @@
    "fuente": "IMUS (Instituto de Matemáticas)"
   },
   {
+   "id": "imus-3515",
+   "titulo": "Lunar Delaunay mosaic and its minimum spanning tree in the plane",
+   "fecha": "2026-11-27",
+   "hora": "12:00",
+   "lugar": "Seminario II (IMUS), Edificio Celestino Mutis",
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "matemáticas",
+   "url": "https://imus.us.es/#actividad/3515",
+   "fuente": "IMUS (Instituto de Matemáticas)"
+  },
+  {
    "id": "divulgaus-ciclo-de-charlas-divulgativas-sobre-el-ictus-para-el-alumnado-universitario-2",
    "titulo": "Ciclo de charlas divulgativas sobre el ictus para el alumnado universitario",
    "fecha": "2026-11-30",
@@ -238,8 +237,8 @@
    ]
   },
   {
-   "id": "cabd-72e81d9dff",
-   "titulo": "Seminario CABD: Christmas Activities. Christmas Talk: Dr Nick Lane",
+   "id": "cabd-3fcf62f45f",
+   "titulo": "Seminario CABD: Christmas Talk: Dr Nick Lane. University College London",
    "fecha": "2026-12-17",
    "hora": "12:00",
    "lugar": "Salón de actos del CABD (campus UPO)",
@@ -252,7 +251,7 @@
    "url": "https://cabd.es/actualidad/agenda/",
    "fuente": "CABD (Biología del Desarrollo)",
    "otrosIds": [
-    "cabd-3fcf62f45f"
+    "cabd-72e81d9dff"
    ]
   },
   {
