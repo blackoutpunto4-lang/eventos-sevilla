@@ -1,6 +1,6 @@
 {
- "generado": "2026-11-17T06:19:58Z",
- "total": 23,
+ "generado": "2026-11-18T06:24:07Z",
+ "total": 21,
  "eventos": [
   {
    "id": "fada-203",
@@ -19,36 +19,6 @@
    "urlInfo": "https://s1.chess-results.com/Tnr1493446.aspx?lan=2&SNode=S0",
    "fuente": "FADA",
    "fechaFin": "2026-11-29"
-  },
-  {
-   "id": "ibis-proyecto-elara-recurrencia-y-adaptacion-genomica-en-la-endocarditis-por-enterococcus-faecalis",
-   "titulo": "Proyecto ELARA: recurrencia y adaptación genómica en la endocarditis por Enterococcus faecalis",
-   "fecha": "2026-11-17",
-   "hora": "08:15",
-   "lugar": "SALÓN DE ACTOS IBiS",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "biología",
-   "url": "https://www.ibis-sevilla.es/es/eventos/2026/11/proyecto-elara-recurrencia-y-adaptacion-genomica-en-la-endocarditis-por-enterococcus-faecalis/",
-   "fuente": "IBiS (Instituto de Biomedicina de Sevilla)"
-  },
-  {
-   "id": "ibis-mitochondrial-dysfunction-from-therapeutic-rescue-to-cellular-mechanisms",
-   "titulo": "Mitochondrial Dysfunction from Therapeutic Rescue to Cellular Mechanisms",
-   "fecha": "2026-11-17",
-   "hora": "15:00",
-   "lugar": "SALÓN DE ACTOS IBiS",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "biología",
-   "url": "https://www.ibis-sevilla.es/es/eventos/2026/11/mitochondrial-dysfunction-from-therapeutic-rescue-to-cellular-mechanisms/",
-   "fuente": "IBiS (Instituto de Biomedicina de Sevilla)"
   },
   {
    "id": "ibis-from-phenotype-to-molecular-docking-experimental-insights-into-a-lupin-hydrolysate-against-aaf926",
@@ -376,6 +346,13 @@
    "fuente": "ABC",
    "fecha": "2026-10-16",
    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOTWJlS2ZRN1NGZ0k1Tmo0Ym1xNHJ1NF9sVG9UUkl6c1JZQnJDTE9PZl9iN2VBZmNCSnVnamZEMkJfeVFmbHFQekJDY2t0TTFWUU10Q3lxTFBUSUtDa0ZvN3l3SmZ0NTFObTZNTHpWUnpwMkdiTmdsUm0tR1lVZ25BUEp0cVpCX0hvVThZaFVBQUt6aDhsYnNDb2tWQ29KSng0ckNYb3dxLUdPbm5z0gGyAUFVX3lxTE1ySWYwRVBCbDNieG9rTmRvZ1VTUTFReEJXektlZzlNOVF6TTBJMHdRSjBGOVN4WEhvaHg0Q0ZHOE4xOENBa1BheE9IQ0VOVUtpWkhyWGhUN1E5MXFDYldraHFwWFdtNlNiV3d6R1o4LUN1REtsdGM4eUVSU1VWWk9vZXQxb09pbGlaaVRzMkxhWm5ENEZqM3BuRWF6b1pmUDJQTkg1WXpXYzFCeVRXSHViaXc?oc=5",
+   "laureado": "Morten Meldal (Nobel de Química 2022)"
+  },
+  {
+   "titulo": "El alcalde de Sevilla recibe en la Casa Consistorial al Premio Nobel de Química Morten Meldal",
+   "fuente": "Europa Press",
+   "fecha": "2026-10-16",
+   "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPWm5pdkhYOS1xNEE0bEZkQXlyeUM3UG5La2FNX2tjbzF1WV9YRWl2VGpUYi1oOUdhdnBiWjdSTEdRTTVNMzNkVjgxT0kyWnAtVG5pZlhtUml3MVZoZE1fX05KMURDZVcwRzlZcEs4eEdIR3VBOFQ0REpqNjJVLW5ta3RaLVQwY1g3TmVCLVZTVzQ2MjRJN2tIQm8tYk00YTBKWTBfQ0dreFJuNWd2ci1iVWZzX1REN252S01GbUNXY05aTVBVZmZwTHY4TUQzYmF1OEZiMDJiX2FkcDYyMmpiSWxiblUxaUVJbXc?oc=5",
    "laureado": "Morten Meldal (Nobel de Química 2022)"
   },
   {
