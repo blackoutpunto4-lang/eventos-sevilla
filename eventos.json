@@ -1,6 +1,6 @@
 {
- "generado": "2026-11-18T06:24:07Z",
- "total": 21,
+ "generado": "2026-11-19T06:20:54Z",
+ "total": 24,
  "eventos": [
   {
    "id": "fada-203",
@@ -19,21 +19,6 @@
    "urlInfo": "https://s1.chess-results.com/Tnr1493446.aspx?lan=2&SNode=S0",
    "fuente": "FADA",
    "fechaFin": "2026-11-29"
-  },
-  {
-   "id": "ibis-from-phenotype-to-molecular-docking-experimental-insights-into-a-lupin-hydrolysate-against-aaf926",
-   "titulo": "From phenotype to molecular docking: experimental insights into a lupin hydrolysate against MASLD and in silico discovery of peptides targeting oxidative stress",
-   "fecha": "2026-11-18",
-   "hora": "08:15",
-   "lugar": "SALÓN DE ACTOS IBiS",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "biología",
-   "url": "https://www.ibis-sevilla.es/es/eventos/2026/11/from-phenotype-to-molecular-docking-experimental-insights-into-a-lupin-hydrolysate-against-masld-and-in-silico-discovery-of-peptides-targeting-oxidative-stress/",
-   "fuente": "IBiS (Instituto de Biomedicina de Sevilla)"
   },
   {
    "id": "imus-3536",
@@ -81,6 +66,36 @@
    "fuente": "IMUS (Instituto de Matemáticas)"
   },
   {
+   "id": "ibis-seminar-open-to-all-ibis-research-areas",
+   "titulo": "SEMINAR OPEN TO ALL IBIS RESEARCH AREAS",
+   "fecha": "2026-11-23",
+   "hora": "10:30",
+   "lugar": "SALÓN DE ACTOS IBiS",
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "biología",
+   "url": "https://www.ibis-sevilla.es/es/eventos/2026/11/seminar-open-to-all-ibis-research-areas/",
+   "fuente": "IBiS (Instituto de Biomedicina de Sevilla)"
+  },
+  {
+   "id": "cajasol-origen-y-evolucion-del-derecho-internacional-casos-actuales-de-estudio-20261123",
+   "titulo": "Origen y Evolución del Derecho Internacional: Casos Actuales de Estudio — Los Lunes en Cajasol",
+   "fecha": "2026-11-23",
+   "hora": "12:00",
+   "lugar": "Sala El Salvador",
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "biología",
+   "url": "https://fundacioncajasol.com/evento/origen-y-evolucion-del-derecho-internacional-casos-actuales-de-estudio/",
+   "fuente": "Fundación Cajasol"
+  },
+  {
    "id": "imus-3514",
    "titulo": "La fabricación de ejemplos: una industria de nuestro tiempo",
    "fecha": "2026-11-24",
@@ -109,6 +124,21 @@
    "tema": "biología",
    "url": "https://www.investigacion.us.es/eventos/ciclo-de-charlas-divulgativas-sobre-el-ictus-para-el-alumnado-universitario-1",
    "fuente": "DivulgaUS (Universidad de Sevilla)"
+  },
+  {
+   "id": "ibis-orai1-dependent-regulation-of-macrophage-adhesion-and-polarization",
+   "titulo": "ORAI1-dependent Regulation of Macrophage Adhesion and Polarization",
+   "fecha": "2026-11-25",
+   "hora": "15:30",
+   "lugar": "SALÓN DE ACTOS IBiS",
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "biología",
+   "url": "https://www.ibis-sevilla.es/es/eventos/2026/11/orai1-dependent-regulation-of-macrophage-adhesion-and-polarization/",
+   "fuente": "IBiS (Instituto de Biomedicina de Sevilla)"
   },
   {
    "id": "imus-3534",
@@ -154,6 +184,21 @@
    "tema": "biología",
    "url": "https://www.investigacion.us.es/eventos/ciclo-de-charlas-divulgativas-sobre-el-ictus-para-el-alumnado-universitario-2",
    "fuente": "DivulgaUS (Universidad de Sevilla)"
+  },
+  {
+   "id": "imus-3546",
+   "titulo": "Kauffman-Type Lattices for Weighted Planar Graphs: An Approach via Cob...",
+   "fecha": "2026-12-02",
+   "hora": "16:30",
+   "lugar": "Seminario II (IMUS), Edificio Celestino Mutis",
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "matemáticas",
+   "url": "https://imus.us.es/#actividad/3546",
+   "fuente": "IMUS (Instituto de Matemáticas)"
   },
   {
    "id": "divulgaus-ciclo-de-charlas-divulgativas-sobre-el-ictus-para-el-alumnado-universitario-3",
