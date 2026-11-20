@@ -1,6 +1,6 @@
 {
- "generado": "2026-11-19T06:20:54Z",
- "total": 24,
+ "generado": "2026-11-20T06:23:55Z",
+ "total": 22,
  "eventos": [
   {
    "id": "fada-203",
@@ -19,36 +19,6 @@
    "urlInfo": "https://s1.chess-results.com/Tnr1493446.aspx?lan=2&SNode=S0",
    "fuente": "FADA",
    "fechaFin": "2026-11-29"
-  },
-  {
-   "id": "imus-3536",
-   "titulo": "How to grasp Emmy Noether´s approach to mathematics and physics",
-   "fecha": "2026-11-19",
-   "hora": "12:00",
-   "lugar": "Seminario II (IMUS), Edificio Celestino Mutis",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "matemáticas",
-   "url": "https://imus.us.es/#actividad/3536",
-   "fuente": "IMUS (Instituto de Matemáticas)"
-  },
-  {
-   "id": "imus-3543",
-   "titulo": "Linear instability of a Burgers--Hilbert traveling wave",
-   "fecha": "2026-11-19",
-   "hora": "12:00",
-   "lugar": "Aula 2.4, Facultad de Matemáticas",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "matemáticas",
-   "url": "https://imus.us.es/#actividad/3543",
-   "fuente": "IMUS (Instituto de Matemáticas)"
   },
   {
    "id": "imus-3517",
@@ -252,8 +222,8 @@
    ]
   },
   {
-   "id": "cabd-3fcf62f45f",
-   "titulo": "Seminario CABD: Christmas Talk: Dr Nick Lane. University College London",
+   "id": "cabd-72e81d9dff",
+   "titulo": "Seminario CABD: Christmas Activities. Christmas Talk: Dr Nick Lane",
    "fecha": "2026-12-17",
    "hora": "12:00",
    "lugar": "Salón de actos del CABD (campus UPO)",
@@ -266,7 +236,7 @@
    "url": "https://cabd.es/actualidad/agenda/",
    "fuente": "CABD (Biología del Desarrollo)",
    "otrosIds": [
-    "cabd-72e81d9dff"
+    "cabd-3fcf62f45f"
    ]
   },
   {
