@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-20T06:23:55Z",
+ "generado": "2026-11-21T06:14:05Z",
  "total": 22,
  "eventos": [
   {
@@ -19,21 +19,6 @@
    "urlInfo": "https://s1.chess-results.com/Tnr1493446.aspx?lan=2&SNode=S0",
    "fuente": "FADA",
    "fechaFin": "2026-11-29"
-  },
-  {
-   "id": "imus-3517",
-   "titulo": "Khovanov monodromy groups via motions",
-   "fecha": "2026-11-20",
-   "hora": "12:30",
-   "lugar": "Seminario I (IMUS), Edificio Celestino Mutis",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "matemáticas",
-   "url": "https://imus.us.es/#actividad/3517",
-   "fuente": "IMUS (Instituto de Matemáticas)"
   },
   {
    "id": "ibis-seminar-open-to-all-ibis-research-areas",
@@ -94,6 +79,21 @@
    "tema": "biología",
    "url": "https://www.investigacion.us.es/eventos/ciclo-de-charlas-divulgativas-sobre-el-ictus-para-el-alumnado-universitario-1",
    "fuente": "DivulgaUS (Universidad de Sevilla)"
+  },
+  {
+   "id": "ibis-cellular-bases-of-synthetic-morphogenesis",
+   "titulo": "Cellular bases of synthetic morphogenesis",
+   "fecha": "2026-11-24",
+   "hora": "15:00",
+   "lugar": "SALÓN DE ACTOS IBiS",
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "biología",
+   "url": "https://www.ibis-sevilla.es/es/eventos/2026/11/cellular-bases-of-synthetic-morphogenesis/",
+   "fuente": "IBiS (Instituto de Biomedicina de Sevilla)"
   },
   {
    "id": "ibis-orai1-dependent-regulation-of-macrophage-adhesion-and-polarization",
@@ -222,8 +222,8 @@
    ]
   },
   {
-   "id": "cabd-72e81d9dff",
-   "titulo": "Seminario CABD: Christmas Activities. Christmas Talk: Dr Nick Lane",
+   "id": "cabd-3fcf62f45f",
+   "titulo": "Seminario CABD: Christmas Talk: Dr Nick Lane. University College London",
    "fecha": "2026-12-17",
    "hora": "12:00",
    "lugar": "Salón de actos del CABD (campus UPO)",
@@ -236,7 +236,7 @@
    "url": "https://cabd.es/actualidad/agenda/",
    "fuente": "CABD (Biología del Desarrollo)",
    "otrosIds": [
-    "cabd-3fcf62f45f"
+    "cabd-72e81d9dff"
    ]
   },
   {
@@ -354,13 +354,6 @@
    "fuente": "Universidad de Sevilla",
    "fecha": "2026-10-16",
    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcEZxN3NiaFNGVVg3UEFyaEZ1aWswRFF4ZzFDVG9RYy1UZlp2NzR3YVFheEc3NDE3RXEzRmFnc3RiN0hCRF9zUlExYW50T3lTeEVJcFBLTW56WjVwWXl1TnRib3haWlplcDBZLUd1SVdweGV2Q3VITmhIX0E5T09sZzEtZGE5UnlpOV9TRGpJRmZaTWZfUEpZbFJLWko2cUxmaXVmQm5YTFl5enBmQUs1aEZB?oc=5",
-   "laureado": "Morten Meldal (Nobel de Química 2022)"
-  },
-  {
-   "titulo": "El alcalde de Sevilla recibe al Nobel de Química Morten Meldal en el Ayuntamiento",
-   "fuente": "ABC",
-   "fecha": "2026-10-16",
-   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOTWJlS2ZRN1NGZ0k1Tmo0Ym1xNHJ1NF9sVG9UUkl6c1JZQnJDTE9PZl9iN2VBZmNCSnVnamZEMkJfeVFmbHFQekJDY2t0TTFWUU10Q3lxTFBUSUtDa0ZvN3l3SmZ0NTFObTZNTHpWUnpwMkdiTmdsUm0tR1lVZ25BUEp0cVpCX0hvVThZaFVBQUt6aDhsYnNDb2tWQ29KSng0ckNYb3dxLUdPbm5z0gGyAUFVX3lxTE1ySWYwRVBCbDNieG9rTmRvZ1VTUTFReEJXektlZzlNOVF6TTBJMHdRSjBGOVN4WEhvaHg0Q0ZHOE4xOENBa1BheE9IQ0VOVUtpWkhyWGhUN1E5MXFDYldraHFwWFdtNlNiV3d6R1o4LUN1REtsdGM4eUVSU1VWWk9vZXQxb09pbGlaaVRzMkxhWm5ENEZqM3BuRWF6b1pmUDJQTkg1WXpXYzFCeVRXSHViaXc?oc=5",
    "laureado": "Morten Meldal (Nobel de Química 2022)"
   },
   {
