@@ -1,6 +1,6 @@
 {
- "generado": "2026-11-23T06:28:21Z",
- "total": 22,
+ "generado": "2026-11-24T06:17:14Z",
+ "total": 23,
  "eventos": [
   {
    "id": "fada-203",
@@ -19,36 +19,6 @@
    "urlInfo": "https://s1.chess-results.com/Tnr1493446.aspx?lan=2&SNode=S0",
    "fuente": "FADA",
    "fechaFin": "2026-11-29"
-  },
-  {
-   "id": "ibis-seminar-open-to-all-ibis-research-areas",
-   "titulo": "SEMINAR OPEN TO ALL IBIS RESEARCH AREAS",
-   "fecha": "2026-11-23",
-   "hora": "10:30",
-   "lugar": "SALÓN DE ACTOS IBiS",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "biología",
-   "url": "https://www.ibis-sevilla.es/es/eventos/2026/11/seminar-open-to-all-ibis-research-areas/",
-   "fuente": "IBiS (Instituto de Biomedicina de Sevilla)"
-  },
-  {
-   "id": "cajasol-origen-y-evolucion-del-derecho-internacional-casos-actuales-de-estudio-20261123",
-   "titulo": "Origen y Evolución del Derecho Internacional: Casos Actuales de Estudio — Los Lunes en Cajasol",
-   "fecha": "2026-11-23",
-   "hora": "12:00",
-   "lugar": "Sala El Salvador",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "biología",
-   "url": "https://fundacioncajasol.com/evento/origen-y-evolucion-del-derecho-internacional-casos-actuales-de-estudio/",
-   "fuente": "Fundación Cajasol"
   },
   {
    "id": "imus-3514",
@@ -99,7 +69,7 @@
    "id": "ibis-orai1-dependent-regulation-of-macrophage-adhesion-and-polarization",
    "titulo": "ORAI1-dependent Regulation of Macrophage Adhesion and Polarization",
    "fecha": "2026-11-25",
-   "hora": "15:30",
+   "hora": "16:00",
    "lugar": "SALÓN DE ACTOS IBiS",
    "tipo": "charla",
    "destacado": false,
@@ -124,6 +94,21 @@
    "tema": "matemáticas",
    "url": "https://imus.us.es/#actividad/3534",
    "fuente": "IMUS (Instituto de Matemáticas)"
+  },
+  {
+   "id": "ibis-from-ex-vivo-to-in-vivo-gene-therapy-in-fanconi-anemia",
+   "titulo": "From Ex Vivo to In Vivo Gene Therapy in Fanconi Anemia",
+   "fecha": "2026-11-26",
+   "hora": "15:30",
+   "lugar": null,
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "biología",
+   "url": "https://www.ibis-sevilla.es/es/eventos/2026/11/from-ex-vivo-to-in-vivo-gene-therapy-in-fanconi-anemia/",
+   "fuente": "IBiS (Instituto de Biomedicina de Sevilla)"
   },
   {
    "id": "imus-3515",
@@ -222,8 +207,8 @@
    ]
   },
   {
-   "id": "cabd-3fcf62f45f",
-   "titulo": "Seminario CABD: Christmas Talk: Dr Nick Lane. University College London",
+   "id": "cabd-72e81d9dff",
+   "titulo": "Seminario CABD: Christmas Activities. Christmas Talk: Dr Nick Lane",
    "fecha": "2026-12-17",
    "hora": "12:00",
    "lugar": "Salón de actos del CABD (campus UPO)",
@@ -236,7 +221,7 @@
    "url": "https://cabd.es/actualidad/agenda/",
    "fuente": "CABD (Biología del Desarrollo)",
    "otrosIds": [
-    "cabd-72e81d9dff"
+    "cabd-3fcf62f45f"
    ]
   },
   {
@@ -321,6 +306,36 @@
    "id": "cabd-be99ca35c7",
    "titulo": "Form and function: an exploration of known and novel 3D genome regulators",
    "fecha": "2027-02-05",
+   "hora": "12:00",
+   "lugar": "Salón de actos del CABD (campus UPO)",
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "biología",
+   "url": "https://cabd.es/actualidad/agenda/",
+   "fuente": "CABD (Biología del Desarrollo)"
+  },
+  {
+   "id": "cabd-ba69562066",
+   "titulo": "Seminario CABD: Dr. Montse Corominas, Dept. de Genética, Microbiología y Estadística, UB, Barcelona",
+   "fecha": "2027-04-02",
+   "hora": "12:00",
+   "lugar": "Salón de actos del CABD (campus UPO)",
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "matemáticas",
+   "url": "https://cabd.es/actualidad/agenda/",
+   "fuente": "CABD (Biología del Desarrollo)"
+  },
+  {
+   "id": "cabd-faed48d5e3",
+   "titulo": "Seminario CABD: Dr. Sara Rguez.-Heras, Head of Research group -Transposable Elements in Development and in Disease Universidad de Granada, Centre for Genomics and Oncological Research (GENYO), Granada",
+   "fecha": "2027-04-09",
    "hora": "12:00",
    "lugar": "Salón de actos del CABD (campus UPO)",
    "tipo": "charla",
