@@ -1,6 +1,6 @@
 {
- "generado": "2026-11-24T06:17:14Z",
- "total": 23,
+ "generado": "2026-11-25T06:18:15Z",
+ "total": 21,
  "eventos": [
   {
    "id": "fada-203",
@@ -19,51 +19,6 @@
    "urlInfo": "https://s1.chess-results.com/Tnr1493446.aspx?lan=2&SNode=S0",
    "fuente": "FADA",
    "fechaFin": "2026-11-29"
-  },
-  {
-   "id": "imus-3514",
-   "titulo": "La fabricación de ejemplos: una industria de nuestro tiempo",
-   "fecha": "2026-11-24",
-   "hora": "12:00",
-   "lugar": "Seminario II (IMUS), Edificio Celestino Mutis",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "matemáticas",
-   "url": "https://imus.us.es/#actividad/3514",
-   "fuente": "IMUS (Instituto de Matemáticas)"
-  },
-  {
-   "id": "divulgaus-ciclo-de-charlas-divulgativas-sobre-el-ictus-para-el-alumnado-universitario-1",
-   "titulo": "Ciclo de charlas divulgativas sobre el ictus para el alumnado universitario",
-   "fecha": "2026-11-24",
-   "hora": "12:30",
-   "lugar": "Edificio verde de la Facultad de Biología",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "biología",
-   "url": "https://www.investigacion.us.es/eventos/ciclo-de-charlas-divulgativas-sobre-el-ictus-para-el-alumnado-universitario-1",
-   "fuente": "DivulgaUS (Universidad de Sevilla)"
-  },
-  {
-   "id": "ibis-cellular-bases-of-synthetic-morphogenesis",
-   "titulo": "Cellular bases of synthetic morphogenesis",
-   "fecha": "2026-11-24",
-   "hora": "15:00",
-   "lugar": "SALÓN DE ACTOS IBiS",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "biología",
-   "url": "https://www.ibis-sevilla.es/es/eventos/2026/11/cellular-bases-of-synthetic-morphogenesis/",
-   "fuente": "IBiS (Instituto de Biomedicina de Sevilla)"
   },
   {
    "id": "ibis-orai1-dependent-regulation-of-macrophage-adhesion-and-polarization",
@@ -93,6 +48,21 @@
    "mencionaNobel": false,
    "tema": "matemáticas",
    "url": "https://imus.us.es/#actividad/3534",
+   "fuente": "IMUS (Instituto de Matemáticas)"
+  },
+  {
+   "id": "imus-3548",
+   "titulo": "Parabolic subgroups of complex braid groups",
+   "fecha": "2026-11-26",
+   "hora": "12:30",
+   "lugar": "Aula 2.3, Facultad de Matemáticas",
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "matemáticas",
+   "url": "https://imus.us.es/#actividad/3548",
    "fuente": "IMUS (Instituto de Matemáticas)"
   },
   {
