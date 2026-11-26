@@ -1,6 +1,6 @@
 {
- "generado": "2026-11-25T06:18:15Z",
- "total": 21,
+ "generado": "2026-11-26T06:17:53Z",
+ "total": 20,
  "eventos": [
   {
    "id": "fada-203",
@@ -21,34 +21,19 @@
    "fechaFin": "2026-11-29"
   },
   {
-   "id": "ibis-orai1-dependent-regulation-of-macrophage-adhesion-and-polarization",
-   "titulo": "ORAI1-dependent Regulation of Macrophage Adhesion and Polarization",
-   "fecha": "2026-11-25",
-   "hora": "16:00",
-   "lugar": "SALÓN DE ACTOS IBiS",
+   "id": "upo-163558",
+   "titulo": "Ciclo de Conferencias Rosario Valpuesta: Investigaciones feministas desde la práctica reflexiva",
+   "fecha": "2026-11-26",
+   "hora": "12:00",
+   "lugar": "Biblioteca-CRAI, Avenida Rectora Rosario Valpuesta Fernández, Dos Hermanas",
    "tipo": "charla",
    "destacado": false,
    "laureado": null,
    "laureadoTema": null,
    "mencionaNobel": false,
    "tema": "biología",
-   "url": "https://www.ibis-sevilla.es/es/eventos/2026/11/orai1-dependent-regulation-of-macrophage-adhesion-and-polarization/",
-   "fuente": "IBiS (Instituto de Biomedicina de Sevilla)"
-  },
-  {
-   "id": "imus-3534",
-   "titulo": "Ortogonalidad múltiple en aproximación multivariada",
-   "fecha": "2026-11-25",
-   "hora": "16:30",
-   "lugar": "Seminario II (IMUS), Edificio Celestino Mutis",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "matemáticas",
-   "url": "https://imus.us.es/#actividad/3534",
-   "fuente": "IMUS (Instituto de Matemáticas)"
+   "url": "https://eventos.upo.es/event_detail/163558",
+   "fuente": "Universidad Pablo de Olavide"
   },
   {
    "id": "imus-3548",
@@ -334,13 +319,6 @@
   }
  ],
  "pistas": [
-  {
-   "titulo": "Morten Peter Meldal, Premio Nobel de Química 2022, ofrece una conferencia en la US",
-   "fuente": "Universidad de Sevilla",
-   "fecha": "2026-10-16",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNcEZxN3NiaFNGVVg3UEFyaEZ1aWswRFF4ZzFDVG9RYy1UZlp2NzR3YVFheEc3NDE3RXEzRmFnc3RiN0hCRF9zUlExYW50T3lTeEVJcFBLTW56WjVwWXl1TnRib3haWlplcDBZLUd1SVdweGV2Q3VITmhIX0E5T09sZzEtZGE5UnlpOV9TRGpJRmZaTWZfUEpZbFJLWko2cUxmaXVmQm5YTFl5enBmQUs1aEZB?oc=5",
-   "laureado": "Morten Meldal (Nobel de Química 2022)"
-  },
   {
    "titulo": "El cicCartuja acoge la visita de Morten P. Meldal, premio Nobel de Química 2022",
    "fuente": "Universidad de Sevilla",
