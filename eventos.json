@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-26T06:17:53Z",
+ "generado": "2026-11-27T06:22:20Z",
  "total": 20,
  "eventos": [
   {
@@ -19,51 +19,6 @@
    "urlInfo": "https://s1.chess-results.com/Tnr1493446.aspx?lan=2&SNode=S0",
    "fuente": "FADA",
    "fechaFin": "2026-11-29"
-  },
-  {
-   "id": "upo-163558",
-   "titulo": "Ciclo de Conferencias Rosario Valpuesta: Investigaciones feministas desde la práctica reflexiva",
-   "fecha": "2026-11-26",
-   "hora": "12:00",
-   "lugar": "Biblioteca-CRAI, Avenida Rectora Rosario Valpuesta Fernández, Dos Hermanas",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "biología",
-   "url": "https://eventos.upo.es/event_detail/163558",
-   "fuente": "Universidad Pablo de Olavide"
-  },
-  {
-   "id": "imus-3548",
-   "titulo": "Parabolic subgroups of complex braid groups",
-   "fecha": "2026-11-26",
-   "hora": "12:30",
-   "lugar": "Aula 2.3, Facultad de Matemáticas",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "matemáticas",
-   "url": "https://imus.us.es/#actividad/3548",
-   "fuente": "IMUS (Instituto de Matemáticas)"
-  },
-  {
-   "id": "ibis-from-ex-vivo-to-in-vivo-gene-therapy-in-fanconi-anemia",
-   "titulo": "From Ex Vivo to In Vivo Gene Therapy in Fanconi Anemia",
-   "fecha": "2026-11-26",
-   "hora": "15:30",
-   "lugar": null,
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "biología",
-   "url": "https://www.ibis-sevilla.es/es/eventos/2026/11/from-ex-vivo-to-in-vivo-gene-therapy-in-fanconi-anemia/",
-   "fuente": "IBiS (Instituto de Biomedicina de Sevilla)"
   },
   {
    "id": "imus-3515",
@@ -243,6 +198,22 @@
    "fuente": "CABD (Biología del Desarrollo)"
   },
   {
+   "id": "imus-3538",
+   "titulo": "Aproximación mediante Splines: Fundamentos y Aplicaciones",
+   "fecha": "2027-01-25",
+   "hora": null,
+   "lugar": "Instituto de Matemáticas de la Universidad de Sevilla (IMUS)",
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "matemáticas",
+   "url": "https://imus.us.es/#actividad/3538",
+   "fuente": "IMUS (Instituto de Matemáticas)",
+   "fechaFin": "2027-01-29"
+  },
+  {
    "id": "cabd-33511f9e1d",
    "titulo": "Seminario CABD: Dr. Jonathan Enriquez. Institut de Génomique Fonctionnelle de Lyon (IGFL) ENS de Lyon",
    "fecha": "2027-01-29",
@@ -303,9 +274,39 @@
    "fuente": "CABD (Biología del Desarrollo)"
   },
   {
+   "id": "cabd-f88ae90f6d",
+   "titulo": "Seminario CABD: Dr. Sedona Murphy. Max Planck Institute for molecular genetics, Berlin",
+   "fecha": "2027-04-16",
+   "hora": "12:00",
+   "lugar": "Salón de actos del CABD (campus UPO)",
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "biología",
+   "url": "https://cabd.es/actualidad/agenda/",
+   "fuente": "CABD (Biología del Desarrollo)"
+  },
+  {
    "id": "cabd-3208645ee6",
    "titulo": "Seminario CABD: Dr. Carolina Parada Borja. Institut Pasteur",
    "fecha": "2027-04-23",
+   "hora": "12:00",
+   "lugar": "Salón de actos del CABD (campus UPO)",
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "biología",
+   "url": "https://cabd.es/actualidad/agenda/",
+   "fuente": "CABD (Biología del Desarrollo)"
+  },
+  {
+   "id": "cabd-d06305d0e7",
+   "titulo": "Seminario CABD: Dr. Isaac Canals, Universidad de Zurich",
+   "fecha": "2027-04-30",
    "hora": "12:00",
    "lugar": "Salón de actos del CABD (campus UPO)",
    "tipo": "charla",
