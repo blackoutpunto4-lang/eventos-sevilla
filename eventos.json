@@ -1,6 +1,6 @@
 {
- "generado": "2026-11-27T06:22:20Z",
- "total": 20,
+ "generado": "2026-11-28T06:17:57Z",
+ "total": 18,
  "eventos": [
   {
    "id": "fada-203",
@@ -21,36 +21,6 @@
    "fechaFin": "2026-11-29"
   },
   {
-   "id": "imus-3515",
-   "titulo": "Lunar Delaunay mosaic and its minimum spanning tree in the plane",
-   "fecha": "2026-11-27",
-   "hora": "12:00",
-   "lugar": "Seminario II (IMUS), Edificio Celestino Mutis",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "matemáticas",
-   "url": "https://imus.us.es/#actividad/3515",
-   "fuente": "IMUS (Instituto de Matemáticas)"
-  },
-  {
-   "id": "divulgaus-ciclo-de-charlas-divulgativas-sobre-el-ictus-para-el-alumnado-universitario-2",
-   "titulo": "Ciclo de charlas divulgativas sobre el ictus para el alumnado universitario",
-   "fecha": "2026-11-30",
-   "hora": "12:30",
-   "lugar": "Facultad de Comunicación",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "biología",
-   "url": "https://www.investigacion.us.es/eventos/ciclo-de-charlas-divulgativas-sobre-el-ictus-para-el-alumnado-universitario-2",
-   "fuente": "DivulgaUS (Universidad de Sevilla)"
-  },
-  {
    "id": "imus-3546",
    "titulo": "Kauffman-Type Lattices for Weighted Planar Graphs: An Approach via Cob...",
    "fecha": "2026-12-02",
@@ -64,21 +34,6 @@
    "tema": "matemáticas",
    "url": "https://imus.us.es/#actividad/3546",
    "fuente": "IMUS (Instituto de Matemáticas)"
-  },
-  {
-   "id": "divulgaus-ciclo-de-charlas-divulgativas-sobre-el-ictus-para-el-alumnado-universitario-3",
-   "titulo": "Ciclo de charlas divulgativas sobre el ictus para el alumnado universitario",
-   "fecha": "2026-12-03",
-   "hora": "12:30",
-   "lugar": "Rectorado de la Universidad de Sevilla",
-   "tipo": "charla",
-   "destacado": false,
-   "laureado": null,
-   "laureadoTema": null,
-   "mencionaNobel": false,
-   "tema": "biología",
-   "url": "https://www.investigacion.us.es/eventos/ciclo-de-charlas-divulgativas-sobre-el-ictus-para-el-alumnado-universitario-3",
-   "fuente": "DivulgaUS (Universidad de Sevilla)"
   },
   {
    "id": "cabd-ae3aa6d6e9",
@@ -212,6 +167,22 @@
    "url": "https://imus.us.es/#actividad/3538",
    "fuente": "IMUS (Instituto de Matemáticas)",
    "fechaFin": "2027-01-29"
+  },
+  {
+   "id": "imus-3542",
+   "titulo": "School on Lie algebras and related structures",
+   "fecha": "2027-01-25",
+   "hora": null,
+   "lugar": "Instituto de Matemáticas de la Universidad de Sevilla (IMUS)",
+   "tipo": "charla",
+   "destacado": false,
+   "laureado": null,
+   "laureadoTema": null,
+   "mencionaNobel": false,
+   "tema": "matemáticas",
+   "url": "https://imus.us.es/#actividad/3542",
+   "fuente": "IMUS (Instituto de Matemáticas)",
+   "fechaFin": "2027-01-26"
   },
   {
    "id": "cabd-33511f9e1d",
